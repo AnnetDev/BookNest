@@ -17,10 +17,10 @@ body {
     flex-direction: column; // for sticky footer 
     justify-content: space-between; // for sticky footer 
     overflow-x: hidden;
-    font-family: $main-font;
+    font-family: variable.$main-font;
     font-size: 14px;
     color: $main-black;
-    background-color: $main-white;
+    background-color: variable.$main-white;
 
     // @media (min-width: $desktop-breakpoint) {
     //     font-size: 18px;
