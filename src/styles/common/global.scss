@@ -1,3 +1,5 @@
+@use './variables';
+
 *,
 *::before,
 *::after {
@@ -17,10 +19,10 @@ body {
     flex-direction: column; // for sticky footer 
     justify-content: space-between; // for sticky footer 
     overflow-x: hidden;
-    font-family: variable.$main-font;
+    font-family: variables.$main-font;
     font-size: 14px;
-    color: $main-black;
-    background-color: variable.$main-white;
+    color: variables.$main-black;
+    background-color: variables.$main-white;
 
     // @media (min-width: $desktop-breakpoint) {
     //     font-size: 18px;
@@ -34,4 +36,9 @@ main {
 
 img {
     display: block;
+}
+
+.common-padding {
+    padding-left: 20px;
+    padding-right: 20px;
 }
