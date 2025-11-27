@@ -1,0 +1,22 @@
+$main-black: #000000;  
+$main-white: #ffffff;
+$beige: #F5F0EA;
+$light-brown: #91735D;
+$dark-brown: #664934;
+$default-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); // to change if needed
+
+$main-font: "Inter", sans-serif;
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+// you create styles for mobile screens first
+// then you add styles for $desktop-breakpoint
+
+// example:
+// . footer {
+//     styles for mobile screens
+
+//     @media (min-width: $desktop-breakpoint) {
+//         styles for desktop screens
+//     }
+// }

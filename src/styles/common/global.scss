@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%; // for sticky footer 
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    flex-direction: column; // for sticky footer 
+    justify-content: space-between; // for sticky footer 
+    overflow-x: hidden;
+    font-family: $main-font;
+    font-size: 14px;
+    color: $main-black;
+    background-color: $main-white;
+
+    // @media (min-width: $desktop-breakpoint) {
+    //     font-size: 18px;
+    // }
+    // example of responsive font size
+}
+
+main {
+    flex-grow: 1; // for sticky footer 
+}
+
+img {
+    display: block;
+}
