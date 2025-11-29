@@ -1,0 +1,69 @@
+@use './common/variables';
+
+.books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: variables.$light-brown;
+    color: variables.$main-white;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    box-shadow: variables.$default-shadow;
+}
+
+.books-title {
+    text-transform: uppercase;
+}
+
+.books-filter {
+    display: inline-flex;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.load-more {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    background-color: variables.$light-brown;
+    color: variables.$main-white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: variables.$default-shadow;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+}
+.book {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: start; 
+    //text-align: center;
+}
+.book img {
+    width: 100%;
+    max-width: 90px;
+    height: 130px;
+    object-fit: cover;
+    box-shadow: variables.$default-shadow;
+    
+}
+.book h3{
+    width: 90%;
+    max-width: 90px;
+    margin: 0.4rem 0 0.1rem 0.2rem;
+    font-size: 12px;
+}
+.book p {
+    width: 90%;
+    max-width: 90px;
+    margin: 0.1rem 0 0.2rem 0.2rem;
+    font-size: 10px;
+}
