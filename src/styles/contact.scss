@@ -1,0 +1,57 @@
+.contact-wrapper { 
+  max-width: 1500px;          
+  margin: 40px auto;         
+  padding: 0px;             
+  border-radius: 12px;
+
+}
+
+/* ==== TOP CONTACT INFO ==== */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: #ccbeb1;
+    gap: 40px;
+    
+}
+
+.address {
+    margin-bottom:1px;
+    
+    
+    
+}
+
+.contact-details i {
+    margin-right: 12px;
+     
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+.contact-info h3 {
+  margin-bottom: 5px;
+  
+}
+
+/* ==== MAP SECTION ==== */
+.map-section iframe,
+.map-section img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: row;      /* keep left + right in one row */
+    }
+
+    .contact-details {
+        text-align: right;        /* text aligns right */
+    }
+}
