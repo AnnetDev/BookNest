@@ -14,10 +14,10 @@ const TOTAL_PAGES = 2400; // Gutendex total pages
 
 /// Function to get the shortest title (only before ';' or ':')
 function getShortestTitle(book) {
-let title = book.title || 'No title';
-const sepIndex = title.search(/[:;]/);
-if (sepIndex > 0) title = title.slice(0, sepIndex);
-return title;
+  let title = book.title || 'No title';
+  const sepIndex = title.search(/[:;]/);
+  if (sepIndex > 0) title = title.slice(0, sepIndex);
+  return title;
 }
 
 // Function to load 6 random books
