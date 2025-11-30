@@ -1,2 +1,3 @@
 import './styles/main.scss';
-import './all-books.js';
+import './scripts/all-books.js';
+import './scripts/hero-slider.js';
