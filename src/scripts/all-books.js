@@ -65,8 +65,8 @@ const filterBtn = document.querySelector('.books-filter');
 filterBtn.addEventListener('click', () => {
   const booksArray = Array.from(allBooksContainer.children);
   booksArray.sort((a, b) => {
-    const titleA = a.querySelector('h3').textContent.toLowerCase();
-    const titleB = b.querySelector('h3').textContent.toLowerCase();
+    const titleA = a.querySelector('p').textContent.toLowerCase();
+    const titleB = b.querySelector('p').textContent.toLowerCase();
     return titleA.localeCompare(titleB);
   });
   allBooksContainer.innerHTML = '';
@@ -74,49 +74,6 @@ filterBtn.addEventListener('click', () => {
 });
 
 
-// // All books from Google Books API
-
-// const container = document.querySelector('.books-grid');
-// const API_KEY = 'AIzaSyA5-7fM1w5g3HZ4uUsC1jARh8fYKe_wZ5k';
-
-// async function showSixRandomGenreBooks() {
-//   // List of possible genres
-//   const genres = ['fantasy', 'romance', 'science', 'mystery', 'history', 'art', 'biography', 'travel'];
-
-//   // Shuffle genres and take the first 6
-//   const selectedGenres = genres.sort(() => 0.5 - Math.random()).slice(0, 6);
-
-//   container.innerHTML = '';
-
-//   // Loop through each selected genre
-//   for (const genre of selectedGenres) {
-//     try {
-//       // Fetch books for the current genre
-//       const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${genre}&maxResults=40&key=${API_KEY}`);
-//       const data = await res.json();
-//       const books = data.items || [];
-//       if (!books.length) continue;
-
-//       // Pick a random book from the genre
-//       const book = books[Math.floor(Math.random() * books.length)];
-//       const info = book.volumeInfo;
-
-//       // Render book info
-//       container.innerHTML += `
-//         <div class="book">
-//           <img src="${info.imageLinks?.thumbnail || ''}" alt="${info.title}">
-//           <h3>${info.title || 'No title'}</h3>
-//           <p>${info.authors ? info.authors.join(', ') : 'Unknown author'}</p>
-//         </div>
-//       `;
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   }
-// }
-
-// // Run the function
-// showSixRandomGenreBooks();
 
 
 
