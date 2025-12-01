@@ -1,27 +1,83 @@
+body {
+    background-color:  #a5a4a4;
+}
+
+.headercommon-padding {
+    max-width: 100%;
+    height: 8rem;
+     background-color:#fff;
+     
+}
+
+
+
+
 nav {
-    background-color:antiquewhite;
-     min-width: 320px;
-    padding: 10px 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 
 }
-
-nav ul {
-    width: 100%;
+.menu-icon{
     text-align: right;
+    margin-left: 1rem;
 }
 
-nav ul li {
+img {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+
+ nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 5px;
+    text-align: right;
+
+
 }
 
 .search-bar {
-     background-color:antiquewhite;
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; 
+    background-color: rgba(234, 224, 211, 0.47); 
+    border-radius: 15px;
+    width: 70%;
+    margin: 15px auto;
+   
+   
 }
 
+.search-bar:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+.search-bar input {
+   
+    flex: 1; 
+    border: none;
+    outline: none;
+    background: transparent; /* Important so it doesn't cover container color */
+    font-size: 16px;
+    height: 28px;
+   
+}
+
+
+.search-bar i {
+    margin-left: 1rem;
+    cursor: pointer;
+    
+    
+    
+}
+
+i {
+    margin-right:10px ;
+}
