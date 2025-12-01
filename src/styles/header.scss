@@ -5,7 +5,8 @@ body {
 .headercommon-padding {
     max-width: 100%;
     height: 8rem;
-     background-color:#fff;
+    background-color:#fff;
+    position: relative;
      
 }
 
@@ -80,4 +81,40 @@ img {
 
 i {
     margin-right:10px ;
+}
+
+.menu-wrapper {
+ background-color: rgb(244, 199, 94);
+width: 12rem;
+max-height: 0px;
+margin-top: 29px;
+overflow: hidden;
+transition: max-height 0.5s;
+
+
+}
+
+.menu-wrapper.open-menu {
+    max-height: 400px;
+}
+
+
+.paragraph {
+    padding: 10px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+
+}
+
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+
 }
