@@ -1,7 +1,5 @@
-// core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
-// import Swiper and modules styles
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -24,7 +22,7 @@ for (let i = 0; i < numSlides; i++) {
 
 async function getHeroBooks() {
     const books = await getBooks();                     
- 
+
     const heroBooks = books.sort(() => 0.5 - Math.random()).slice(0, 10);
 
     createSlides(heroBooks);                              
@@ -45,7 +43,7 @@ async function getHeroBooks() {
         contentContainer.appendChild(textContainer);
 
         const promoText = document.createElement('h2');
-        promoText.textContent = 'Black Week';
+        promoText.textContent = 'Black Week!';
         textContainer.appendChild(promoText);
 
         const promoTextDescription = document.createElement('h3');
@@ -71,7 +69,7 @@ getHeroBooks();
 
 // init Swiper:
 const heroSwiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Autoplay, EffectCoverflow],
+    modules: [Autoplay, EffectCoverflow],
     slidesPerView: 1,
     direction: 'horizontal',
     loop: true,
@@ -79,71 +77,29 @@ const heroSwiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
         type: 'bullets',
-        renderCustom: (swiper, current, total) => {
-            // Возвращаем РОВНО 3 буллета, средний — активный
-            return `
-              <span class="swiper-pagination-bullet bullet-prev"  aria-label="Previous slide"></span>
-              <span class="swiper-pagination-bullet swiper-pagination-bullet-active bullet-middle" aria-current="true"></span>
-              <span class="swiper-pagination-bullet bullet-next"  aria-label="Next slide"></span>
-            `;
-          },
     },
-
+    slidesPerView: 1.3,
+    spaceBetween: 30,
 
     a11y: {
         prevSlideMessage: 'Previous slide',
         nextSlideMessage: 'Next slide',
     },
-    speed: 1000,
 
-    spaceBetween: 20,
+    speed: 1000,
 
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
-    // effect: 'fade',
-    // // | 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
-    // effect: 'coverflow',
-    // fadeEffect: {
-    //     crossFade: true
-    // },
+
     breakpoints: {
         768: {
-            slidesPerView: 2,
+            slidesPerView: 2.3,   
         },
         1024: {
-            slidesPerView: 3,
+            slidesPerView: 3.3, 
         },
     },
 
-    on: {
-        init(swiper) {
-          const pag = swiper.pagination.el;
-    
-          // Делегирование кликов по кастомным буллетам
-          pag.addEventListener('click', (e) => {
-            const t = e.target;
-            if (t.classList.contains('bullet-prev')) {
-              swiper.slidePrev();
-            } else if (t.classList.contains('bullet-next')) {
-              swiper.slideNext();
-            }
-            // Средний буллет — просто индикатор, клик по нему игнорируем
-          });
-        },
-    
-        // На любом изменении слайда просто перерисовываем пагинацию,
-        // чтобы оставить средний буллет активным.
-        slideChange(swiper) {
-          swiper.pagination.render();
-          swiper.pagination.update();
-        },
-      },
 });
-
-//add breakpoints
-
-// heroSwiper();
-
-

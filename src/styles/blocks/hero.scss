@@ -19,6 +19,7 @@
     height: auto;
     max-width: 420px;
     box-shadow: variables.$default-shadow;
+    cursor: pointer;
 }
 
 .hero-swiper.swiper {
@@ -49,12 +50,15 @@
 
     h2 {
         font-size: 1.8rem;
-        // margin-bottom: 10px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     h3 {
         font-size: 1.2rem;
         margin: 5px 0;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -65,29 +69,3 @@
 .hero .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: variables.$dark-brown;
 }
-
-
-.swiper-pagination {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: #ccc;
-    opacity: 1;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #000;
-  }
-  
-  .bullet-middle {
-    cursor: default; // чтобы не казалось кликабельным
-  }
-  
