@@ -1,11 +1,19 @@
 @use './common/variables.scss';
 
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 .header.common-padding {
     max-width: 100%;
     height: 8rem;
     background-color:#fff;
     position: relative;
-    box-shadow: 0px 2px 0px rgb(241, 238, 238);
+   box-shadow: 0px 0px 5px rgb(206, 205, 205);
     
      
 }
@@ -40,7 +48,7 @@ svg {
     width: 20px;
     height: 20px;
 }
-    justify-content: space-between;
+   
     
 }
 
@@ -52,7 +60,6 @@ li{
     position: relative;
     display: flex;
     align-items: center;
-    border: 1px solid #ccc; 
     background-color: rgba(234, 224, 211, 0.47); 
     border-radius: 15px;
     width: 70%;
@@ -96,19 +103,20 @@ i {
 }
 
 .menu-wrapper {
- background-color: rgb(244, 199, 94);
-width: 12rem;
+ background-color: #ffffff;
+ max-width: 100%;
+width: 100%;
 max-height: 0px;
 margin-top: 29px;
 overflow: hidden;
 transition: max-height 0.5s;
-
-
+position: absolute; 
+z-index: 10;        /* higher than the hero image */
+left: 0;
+top: 78%;
+box-shadow: 0px 0px 5px rgb(241, 238, 238);
 }
 
-.menu-wrapper{
-    z-index: 999;
-}
 .menu-wrapper.open-menu {
     max-height: 400px;
 
@@ -117,6 +125,9 @@ transition: max-height 0.5s;
 
 .paragraph {
     padding: 10px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
 }
 
 .sub-menu-link span {
