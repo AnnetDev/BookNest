@@ -1,0 +1,120 @@
+@use '../common/variables';
+
+.popup-container {
+    padding: 20px;
+    width: 80%;
+    min-height: 300px;
+    background-color: variables.$main-white;
+    position: absolute;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: variables.$default-shadow;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+
+    @media (min-width: variables.$tablet-breakpoint) {
+        width: 60%;
+    }
+}
+
+
+.popup-container.visible {
+    opacity: 1;
+}
+
+.popup-container.fade-out {
+    opacity: 0;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-close-button {
+    background-color: transparent;
+    border: none;
+    transition: all ease 0.3s;
+
+    &:hover,
+    &:focus {
+        scale: 1.1;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+}
+
+.popup-container .save-cart-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.add-cart-btn,
+.save-btn {
+    border: none;
+    background-color: variables.$light-brown;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    color: variables.$main-white;
+    font-size: 1.1rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    svg {
+        width: 17px;
+        height: 17px;
+        overflow: visible;
+    }
+
+    span {
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover,
+    &:focus {
+        scale: 1.05;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+}
+
+.popup-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.popup-content-visual img{
+    max-width: 100%;
+    height: auto;
+}
+
+.popup-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+

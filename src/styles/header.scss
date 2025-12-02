@@ -1,4 +1,4 @@
-
+@use './common/variables.scss';
 
 .header.common-padding {
     max-width: 100%;
@@ -38,7 +38,11 @@ img {
     list-style: none;
     text-align: right;
 
-
+svg {
+    fill: variables.$main-black;
+    width: 20px;
+    height: 20px;
+}
 }
 
 .search-bar {

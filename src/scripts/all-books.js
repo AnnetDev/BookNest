@@ -6,7 +6,7 @@
 
 // All books:
 // https://gutendex.com/books
-
+import { bookPopup } from "./bookPopup";
 
 const allBooksContainer = document.querySelector('.books-grid');
 
@@ -36,6 +36,7 @@ function loadRandomBooks() {
       randomBooks.forEach(book => {
         const bookEl = document.createElement('div');
         bookEl.classList.add('book');
+        bookEl.classList.add('clickable-book');
 
         const authors = book.authors.map(a => a.name).join(', ');
         const imgSrc = book.formats['image/jpeg'] || '';
@@ -49,6 +50,7 @@ function loadRandomBooks() {
 
         allBooksContainer.appendChild(bookEl);
       });
+      bookPopup();
     })
     .catch(err => console.error(err));
 }
