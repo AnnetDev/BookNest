@@ -21,24 +21,24 @@ nav {
 
 }
 .menu-icon{
-    text-align: right;
     margin-left: 1rem;
 }
 
-img {
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-
+.logo-icon{
+    margin-left: 6rem;
 }
 
 
- nav ul li {
-    display: inline-block;
+
+ul { 
+    display: flex;
     list-style: none;
-    text-align: right;
+    justify-content: space-between;
+    
+}
 
-
+li{
+    margin: 3px;
 }
 
 .search-bar {
@@ -50,9 +50,14 @@ img {
     border-radius: 15px;
     width: 70%;
     margin: 15px auto;
-   
+   height: 38px;
    
 }
+
+input {
+    margin-top: 8px;
+}
+
 
 .search-bar:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -72,11 +77,11 @@ img {
 
 
 .search-bar i {
-    margin-left: 1rem;
-    cursor: pointer;
+    max-width: 20%;
+    position: relative;
+    flex-shrink: 0;
     
-    
-    
+
 }
 
 i {
@@ -94,8 +99,12 @@ transition: max-height 0.5s;
 
 }
 
+.menu-wrapper{
+    z-index: 999;
+}
 .menu-wrapper.open-menu {
     max-height: 400px;
+
 }
 
 
