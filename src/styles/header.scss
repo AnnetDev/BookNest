@@ -1,0 +1,124 @@
+@use './common/variables.scss';
+
+.header.common-padding {
+    max-width: 100%;
+    height: 8rem;
+    background-color:#fff;
+    position: relative;
+    box-shadow: 0px 2px 0px rgb(241, 238, 238);
+    
+     
+}
+
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.menu-icon{
+    text-align: right;
+    margin-left: 1rem;
+}
+
+img {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+
+ nav ul li {
+    display: inline-block;
+    list-style: none;
+    text-align: right;
+
+svg {
+    fill: variables.$main-black;
+    width: 20px;
+    height: 20px;
+}
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; 
+    background-color: rgba(234, 224, 211, 0.47); 
+    border-radius: 15px;
+    width: 70%;
+    margin: 15px auto;
+   
+   
+}
+
+.search-bar:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+.search-bar input {
+   
+    flex: 1; 
+    border: none;
+    outline: none;
+    background: transparent; /* Important so it doesn't cover container color */
+    font-size: 16px;
+    height: 28px;
+   
+}
+
+
+.search-bar i {
+    margin-left: 1rem;
+    cursor: pointer;
+    
+    
+    
+}
+
+i {
+    margin-right:10px ;
+}
+
+.menu-wrapper {
+ background-color: rgb(244, 199, 94);
+width: 12rem;
+max-height: 0px;
+margin-top: 29px;
+overflow: hidden;
+transition: max-height 0.5s;
+
+
+}
+
+.menu-wrapper.open-menu {
+    max-height: 400px;
+}
+
+
+.paragraph {
+    padding: 10px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+
+}
+
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+
+}
