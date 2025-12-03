@@ -2,10 +2,25 @@
 
 const CART_KEY = "booknest-cart";
 
-// Get all items
-export function getCart() {
-  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+// Initialize cart in localStorage if missing
+export function initCart() {
+    const cart = localStorage.getItem(CART_KEY);
+    if (!cart) {
+        localStorage.setItem(CART_KEY, JSON.stringify([]));
+    }
 }
+
+export function getCart() {
+    initCart(); 
+    try {
+        return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    } catch (e) {
+        localStorage.setItem(CART_KEY, JSON.stringify([]));
+        return [];
+    }
+}
+
+
 
 // Save updated items
 export function saveCart(cart) {
