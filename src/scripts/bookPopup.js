@@ -66,11 +66,11 @@ export function bookPopup() {
             // ${book.querySelector('img').outerHTML}`;
             
             const data = book.bookData; 
-            console.log(data); 
+            const price = book.dataset.price;
 
             const fullTitle = data.title;
             const imgSrc = data.formats['image/jpeg'];
-            const authors = data.authors.map(a => a.name).join(', ');
+            const authors = data.authors.map(a => normalizeAuthorName(a.name)).join(', ');
             const description = data.subjects?.join(', ') || "No description available";
 
             popupContentVisual.innerHTML = `
@@ -81,6 +81,7 @@ export function bookPopup() {
                 <h2 class="popup-title">${fullTitle}</h2>
                 <p class="popup-authors">${authors}</p>
                 <p class="popup-description">${description}</p>
+                <p class="popup-price"> ${price} SEK </p>
             `;
 
             // close

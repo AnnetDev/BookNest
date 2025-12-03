@@ -79,7 +79,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-    margin-top: 0.8rem;
 
     svg {
         width: 17px;
@@ -116,9 +115,20 @@
 }
 
 .popup-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     margin-top: 0px;
+}
+.popup-authors {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+.popup-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: variables.$dark-brown;
+    margin-top: 1.5rem;
 }
 
 
