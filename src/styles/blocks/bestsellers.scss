@@ -1,0 +1,97 @@
+@use '../common/variables';
+
+
+.best-and-top-wrapper { /* section background color */
+    background: variables.$beige;
+}
+
+
+.bestsellers-title { /* bestsellers title */
+    text-align: start;
+    padding: 0.5rem;
+    max-inline-size: fit-content;
+}
+
+
+.books-row { /* the book it returns and its styles */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+
+  > div { /* position of author & title */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    word-wrap: break-word;
+    flex: 0 0 auto;  // keeps each card a fixed width for scrolling
+
+
+    img {
+      width: 100%;
+      max-width: 90px;
+      height: 130px;
+      object-fit: cover;
+      box-shadow: variables.$default-shadow;
+    }
+  }
+}
+
+#bestsellers-container div {
+margin-right: 10px;
+}
+
+.books-row p { /* the author & title text */ 
+    width: 90%;
+    max-width: 90px;
+    margin: 0.1rem 0 0.2rem 0.2rem;
+    font-size: 10px;
+}
+
+
+.book-title {
+    font-weight: bold;
+}
+
+// top genres section //
+.topgenres-title { /* top genres title */
+    text-align: start;
+    padding: 0.5rem;
+    max-inline-size: fit-content;   
+}
+
+
+#bestsellers-container,
+#topgenres-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 1rem; // optional but nice
+}
+/*
+
+
+
+
+#topgenres-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+} */
+
+.books-row {
+  white-space: nowrap; // keeps cards in a row, horizontally scrollable
+}
+
+.books-row > div {
+  white-space: normal; // allows title & author text to wrap inside each card
+}
