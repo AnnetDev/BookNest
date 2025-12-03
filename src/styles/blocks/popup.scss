@@ -79,6 +79,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 5px;
+    margin-top: 0.8rem;
 
     svg {
         width: 17px;
@@ -105,16 +106,19 @@
     display: grid;
     grid-template-columns: 0.9fr 1fr;
     flex-grow: 1;
-    gap: 10px;
+    gap: 20px;
 }
 
 .popup-content-visual img{
     max-width: 100%;
     height: auto;
+    box-shadow: variables.$default-shadow;
 }
 
 .popup-title {
     font-size: 0.9rem;
     font-weight: 500;
+    margin-top: 0px;
 }
+
 

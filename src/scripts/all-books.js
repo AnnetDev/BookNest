@@ -1,24 +1,8 @@
-// Top books:
-// https://gutendex.com/books?sort=popular
-
-//Genres: "subjects": ["Horror", "Science fiction", "Ghost stories"]
-// https://gutendex.com/books?topic=genre&subject=Horror
-
-// All books:
-// https://gutendex.com/books
 import { bookPopup } from "./bookPopup";
 
 const allBooksContainer = document.querySelector('.books-grid');
 
 const TOTAL_PAGES = 2400; // Gutendex total pages
-
-/// Function to get the shortest title (only before ';' or ':')
-// function getShortestTitle(book) {
-//   let title = book.title || 'No title';
-//   const sepIndex = title.search(/[:;]/);
-//   if (sepIndex > 0) title = title.slice(0, sepIndex);
-//   return title;
-// }
 
 function getShortestTitle(book) { 
   let title = book.title || 'No title'; 
@@ -26,7 +10,7 @@ function getShortestTitle(book) {
   if (words.length <= 5) return title; 
   return words.slice(0, 5).join(' ') + '..'; 
 }
-function normalizeAuthorName(name) {
+export function normalizeAuthorName(name) {
   if (!name.includes(',')) return name; 
   const [last, first] = name.split(',').map(s => s.trim());
   return `${first} ${last}`; 

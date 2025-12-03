@@ -1,3 +1,4 @@
+import { normalizeAuthorName } from "./all-books";  
 const body = document.querySelector('body');
 
 export function bookPopup() {
@@ -73,12 +74,12 @@ export function bookPopup() {
             const description = data.subjects?.join(', ') || "No description available";
 
             popupContentVisual.innerHTML = `
-                <h2 class="popup-title">${fullTitle}</h2>
-                <p class="popup-authors">${authors}</p>
                 <img src="${imgSrc}" alt="${fullTitle}">
             `;
 
             popupContentText.innerHTML = `
+                <h2 class="popup-title">${fullTitle}</h2>
+                <p class="popup-authors">${authors}</p>
                 <p class="popup-description">${description}</p>
             `;
 
