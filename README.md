@@ -108,3 +108,4 @@ Design a **mobile-first experience** that is intuitive, visually appealing, and 
 🚀 [View BookNest Prototype](https://gameprediction.netlify.app)  
 
 > Perfect example of turning a design brief into a working interactive prototype.
+>>>>>>> origin/main
