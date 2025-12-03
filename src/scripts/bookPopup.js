@@ -60,10 +60,27 @@ export function bookPopup() {
             popupContentText.classList.add('popup-content-text');
             popupContent.appendChild(popupContentText);
 
-            popupContentVisual.innerHTML = `
-            <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
-            ${book.querySelector('img').outerHTML}`;
+            // popupContentVisual.innerHTML = `
+            // <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
+            // ${book.querySelector('img').outerHTML}`;
+            
+            const data = book.bookData; 
+            console.log(data); 
 
+            const fullTitle = data.title;
+            const imgSrc = data.formats['image/jpeg'];
+            const authors = data.authors.map(a => a.name).join(', ');
+            const description = data.subjects?.join(', ') || "No description available";
+
+            popupContentVisual.innerHTML = `
+                <h2 class="popup-title">${fullTitle}</h2>
+                <p class="popup-authors">${authors}</p>
+                <img src="${imgSrc}" alt="${fullTitle}">
+            `;
+
+            popupContentText.innerHTML = `
+                <p class="popup-description">${description}</p>
+            `;
 
             // close
             closeButton.addEventListener('click', closePopup);

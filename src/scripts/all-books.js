@@ -13,11 +13,23 @@ const allBooksContainer = document.querySelector('.books-grid');
 const TOTAL_PAGES = 2400; // Gutendex total pages
 
 /// Function to get the shortest title (only before ';' or ':')
-function getShortestTitle(book) {
-  let title = book.title || 'No title';
-  const sepIndex = title.search(/[:;]/);
-  if (sepIndex > 0) title = title.slice(0, sepIndex);
-  return title;
+// function getShortestTitle(book) {
+//   let title = book.title || 'No title';
+//   const sepIndex = title.search(/[:;]/);
+//   if (sepIndex > 0) title = title.slice(0, sepIndex);
+//   return title;
+// }
+
+function getShortestTitle(book) { 
+  let title = book.title || 'No title'; 
+  const words = title.split(' '); 
+  if (words.length <= 5) return title; 
+  return words.slice(0, 5).join(' ') + '..'; 
+}
+function normalizeAuthorName(name) {
+  if (!name.includes(',')) return name; 
+  const [last, first] = name.split(',').map(s => s.trim());
+  return `${first} ${last}`; 
 }
 
 // Function to load 6 random books
@@ -37,8 +49,9 @@ function loadRandomBooks() {
         const bookEl = document.createElement('div');
         bookEl.classList.add('book');
         bookEl.classList.add('clickable-book');
+        bookEl.bookData = book; // adding book data to the element for popup use
 
-        const authors = book.authors.map(a => a.name).join(', ');
+        const authors = book.authors.map(a => normalizeAuthorName(a.name)).join(', ');
         const imgSrc = book.formats['image/jpeg'] || '';
         const shortTitle = getShortestTitle(book);
 
