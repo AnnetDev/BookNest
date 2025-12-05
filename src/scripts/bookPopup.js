@@ -1,5 +1,5 @@
+import { normalizeAuthorName } from "./all-books";  
 import { addToCart, updateCartCount } from "./cartService.js";
-
 
 const body = document.querySelector('body');
 
