@@ -1,4 +1,6 @@
-import { normalizeAuthorName } from "./all-books";  
+import { addToCart, updateCartCount } from "./cartService.js";
+
+
 const body = document.querySelector('body');
 
 export function bookPopup() {
@@ -100,6 +102,25 @@ export function bookPopup() {
                 if (popupContainer.contains(e.target)) return;
                 closePopup();
             }
-        });
+       
+
+       const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
+       addCartBtn.addEventListener("click", () => {
+       const bookData = {
+        title: book.querySelector("h3").textContent,
+        img: book.querySelector("img").src,
+        author: book.querySelector("p")?.textContent || "Unknown author"
+    };
+
+        addToCart(bookData);
+        updateCartCount();
+
+         alert("Book added to cart!");
+     });
+    
+    
     });
+
+
+});
 }
