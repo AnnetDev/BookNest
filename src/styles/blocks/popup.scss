@@ -7,7 +7,7 @@
     background-color: variables.$main-white;
     position: fixed;
     z-index: 5;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: variables.$default-shadow;
@@ -105,7 +105,7 @@
     display: grid;
     grid-template-columns: 0.9fr 1fr;
     flex-grow: 1;
-    gap: 20px;
+    gap: 16px;
 }
 
 .popup-content-visual img{
@@ -129,6 +129,23 @@
     font-weight: 600;
     color: variables.$dark-brown;
     margin-top: 1.5rem;
+}
+.popup-description-wrapper {
+    max-height: 200px;      
+    overflow-y: auto;       
+    padding-right: 6px;    
+    margin-bottom: 0.5rem;  
+}
+
+.popup-description-wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+.popup-description-wrapper::-webkit-scrollbar-thumb {
+    background-color: variables.$light-brown;
+    border-radius: 4px;
+}
+.popup-description-wrapper::-webkit-scrollbar-track {
+    background: #f3f3f3;
 }
 
 

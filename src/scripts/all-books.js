@@ -4,7 +4,7 @@ const allBooksContainer = document.querySelector('.books-grid');
 
 const TOTAL_PAGES = 2400; // Gutendex total pages
 
-function getRandomPrice() {
+export function getRandomPrice() {
     const min = 120;
     const max = 320;
 

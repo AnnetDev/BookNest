@@ -73,7 +73,7 @@ export function bookPopup() {
             const fullTitle = data.title;
             const imgSrc = data.formats['image/jpeg'];
             const authors = data.authors.map(a => normalizeAuthorName(a.name)).join(', ');
-            const description = data.subjects?.join(', ') || "No description available";
+            const description = data.summaries?.join(', ') || "No description available";
 
             popupContentVisual.innerHTML = `
                 <img src="${imgSrc}" alt="${fullTitle}">
@@ -82,7 +82,9 @@ export function bookPopup() {
             popupContentText.innerHTML = `
                 <h2 class="popup-title">${fullTitle}</h2>
                 <p class="popup-authors">${authors}</p>
-                <p class="popup-description">${description}</p>
+                <div class="popup-description-wrapper">
+                     <p class="popup-description">${description}</p>
+                </div>
                 <p class="popup-price"> ${price} SEK </p>
             `;
 
@@ -107,9 +109,10 @@ export function bookPopup() {
        const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
        addCartBtn.addEventListener("click", () => {
        const bookData = {
-        title: book.querySelector("h3").textContent,
-        img: book.querySelector("img").src,
-        author: book.querySelector("p")?.textContent || "Unknown author"
+        title: fullTitle,
+        img: imgSrc,
+        author: authors,
+        price: price
     };
 
         addToCart(bookData);
