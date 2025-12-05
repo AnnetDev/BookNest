@@ -1,0 +1,24 @@
+@use '../common/variables';
+
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+
+    right: 30px;
+    z-index: 99;
+    background-color: #C4B7A8;
+    color: variables.$main-white;
+    cursor: pointer;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+    border-radius: 20rem;
+    border: 1px solid variables.$dark-brown;
+    font-size: 2.75rem;
+}
+
+#scrollBtn:hover {
+    background-color: variables.$dark-brown;
+}
