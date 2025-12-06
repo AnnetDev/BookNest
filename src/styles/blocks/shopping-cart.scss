@@ -5,10 +5,20 @@
     justify-content: space-between; 
     align-items: center;
 }
+.cart-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding-bottom: 0.8rem;
+}
 #order-button { 
     width: 100%;
+    max-width: 390px;
     padding: 12px;
-    margin-top: 10px;
     background-color: variables.$light-brown;
     color: white;
     border: none;
@@ -19,8 +29,8 @@
 }
 #continue-shopping-button {
     width: 100%;
+    max-width: 390px;
     padding: 12px;
-    margin-top: 10px;
     background-color: white;
     color: variables.$dark-brown;
     border: 1px solid variables.$dark-brown;
@@ -28,4 +38,11 @@
     cursor: pointer;
     font-size: 16px;
     box-shadow: variables.$default-shadow;
+}
+.recommended-books {
+    background-color: variables.$beige;
+    padding: 0.1rem 0.5rem 0rem 0.5rem;
+}
+.contact-wrapper {
+    margin-top: 0;
 }
