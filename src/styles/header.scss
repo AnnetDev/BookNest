@@ -13,12 +13,8 @@ body {
     height: 8rem;
     background-color:#fff;
     position: relative;
-   box-shadow: 0px 0px 5px rgb(206, 205, 205);
-    
-     
+    box-shadow: 0px 0px 5px rgb(206, 205, 205);  
 }
-
-
 
 
 nav {
@@ -37,20 +33,17 @@ nav {
 }
 
 
-
 ul { 
     display: flex;
     list-style: none;
     text-align: right;
-
+}
 svg {
     fill: variables.$main-black;
     width: 20px;
     height: 20px;
 }
    
-    
-}
 
 li{
     margin: 3px;
@@ -94,8 +87,6 @@ input {
     max-width: 20%;
     position: relative;
     flex-shrink: 0;
-    
-
 }
 
 i {
@@ -103,26 +94,27 @@ i {
 }
 
 .menu-wrapper {
- background-color: #ffffff;
- max-width: 100%;
-width: 100%;
-max-height: 0px;
-margin-top: 29px;
-overflow: hidden;
-transition: max-height 0.5s;
-position: absolute; 
-z-index: 10;        /* higher than the hero image */
-left: 0;
-top: 78%;
-box-shadow: 0px 0px 5px rgb(241, 238, 238);
+    background-color: #ffffff;
+    max-width: 100%;
+    width: 100%;
+    max-height: 0px;
+    margin-top: 29px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    position: absolute; 
+    z-index: 10;        /* higher than the hero image */
+    left: 0;
+    top: 78%;
+    box-shadow: 0px 0px 5px rgb(241, 238, 238);
 }
 
 .menu-wrapper.open-menu {
     max-height: 400px;
-
 }
 
-
+.menu-icon {
+    cursor: pointer;
+}
 .paragraph {
     padding: 10px;
     color: black;
@@ -133,9 +125,11 @@ box-shadow: 0px 0px 5px rgb(241, 238, 238);
 .sub-menu-link span {
     font-size: 22px;
     transition: transform 0.5s;
-
 }
 
+.sub-menu-link {
+    text-decoration: none;
+}
 
 .sub-menu-link:hover span {
     transform: translateX(5px);
@@ -145,3 +139,4 @@ box-shadow: 0px 0px 5px rgb(241, 238, 238);
     font-weight: 600;
 
 }
+

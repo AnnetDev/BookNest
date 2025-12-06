@@ -1,0 +1,31 @@
+@use '../common/variables';
+
+.cart-total {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+#order-button { 
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: variables.$light-brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: variables.$default-shadow;
+}
+#continue-shopping-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: white;
+    color: variables.$dark-brown;
+    border: 1px solid variables.$dark-brown;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: variables.$default-shadow;
+}
