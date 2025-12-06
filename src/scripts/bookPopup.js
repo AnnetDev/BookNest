@@ -1,5 +1,5 @@
+import { normalizeAuthorName } from "./all-books";  
 import { addToCart, updateCartCount } from "./cartService.js";
-
 
 const body = document.querySelector('body');
 
@@ -63,10 +63,30 @@ export function bookPopup() {
             popupContentText.classList.add('popup-content-text');
             popupContent.appendChild(popupContentText);
 
-            popupContentVisual.innerHTML = `
-            <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
-            ${book.querySelector('img').outerHTML}`;
+            // popupContentVisual.innerHTML = `
+            // <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
+            // ${book.querySelector('img').outerHTML}`;
+            
+            const data = book.bookData; 
+            const price = book.dataset.price;
 
+            const fullTitle = data.title;
+            const imgSrc = data.formats['image/jpeg'];
+            const authors = data.authors.map(a => normalizeAuthorName(a.name)).join(', ');
+            const description = data.summaries?.join(', ') || "No description available";
+
+            popupContentVisual.innerHTML = `
+                <img src="${imgSrc}" alt="${fullTitle}">
+            `;
+
+            popupContentText.innerHTML = `
+                <h2 class="popup-title">${fullTitle}</h2>
+                <p class="popup-authors">${authors}</p>
+                <div class="popup-description-wrapper">
+                     <p class="popup-description">${description}</p>
+                </div>
+                <p class="popup-price"> ${price} SEK </p>
+            `;
 
             // close
             closeButton.addEventListener('click', closePopup);
@@ -89,9 +109,10 @@ export function bookPopup() {
        const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
        addCartBtn.addEventListener("click", () => {
        const bookData = {
-        title: book.querySelector("h3").textContent,
-        img: book.querySelector("img").src,
-        author: book.querySelector("p")?.textContent || "Unknown author"
+        title: fullTitle,
+        img: imgSrc,
+        author: authors,
+        price: price
     };
 
         addToCart(bookData);
