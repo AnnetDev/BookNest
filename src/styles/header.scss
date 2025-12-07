@@ -25,18 +25,20 @@ nav {
 
 }
 .menu-icon{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .logo-icon{
-    margin-left: 6rem;
+    margin-left: 4rem;
 }
-
 
 ul { 
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: right;
+    gap: 0.5rem;
 }
 svg {
     fill: variables.$main-black;
@@ -45,10 +47,6 @@ svg {
 }
    
 
-li{
-    margin: 3px;
-}
-
 .search-bar {
     position: relative;
     display: flex;
@@ -56,9 +54,10 @@ li{
     background-color: rgba(234, 224, 211, 0.47); 
     border-radius: 15px;
     width: 70%;
-    margin: 15px auto;
-   height: 38px;
-   
+    margin: 5px auto;
+    height: 38px;
+    width: 100%;
+    max-width: 390px;
 }
 
 input {
@@ -79,7 +78,7 @@ input {
     background: transparent; /* Important so it doesn't cover container color */
     font-size: 16px;
     height: 28px;
-   
+    margin-left: 5px;
 }
 
 

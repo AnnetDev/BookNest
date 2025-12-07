@@ -1,5 +1,5 @@
 import { bookPopup } from "./bookPopup.js";
-import { normalizeAuthorName } from "./all-books";  
+import { normalizeAuthorName } from "./all-books.js";  
 import { getRandomPrice } from "./all-books.js";
 
 //container --> holds ALL the books

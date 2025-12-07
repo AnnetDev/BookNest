@@ -66,12 +66,15 @@ function loadRandomBooks() {
 loadRandomBooks();
 
 const loadMoreBtn = document.querySelector('.load-more');
-loadMoreBtn.addEventListener('click', () => {
-  loadRandomBooks();
-});
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    loadRandomBooks();
+  });
+}
 
 const filterBtn = document.querySelector('.books-filter');
-filterBtn.addEventListener('click', () => {
+if (filterBtn) {
+  filterBtn.addEventListener('click', () => {
   const booksArray = Array.from(allBooksContainer.children);
   booksArray.sort((a, b) => {
     const titleA = a.querySelector('p').textContent.toLowerCase();
@@ -81,6 +84,8 @@ filterBtn.addEventListener('click', () => {
   allBooksContainer.innerHTML = '';
   booksArray.forEach(book => allBooksContainer.appendChild(book));
 });
+} 
+
 
 
 
