@@ -118,7 +118,23 @@ export function bookPopup() {
         addToCart(bookData);
         updateCartCount();
 
-         alert("Book added to cart!");
+         addCartBtn.addEventListener("click", () => {
+         const bookData = {
+            title: fullTitle,
+            img: imgSrc,
+            author: authors,
+            price: price
+    };
+
+    addToCart(bookData);
+    updateCartCount();
+
+    closePopup();
+
+    showFullSuccessAnimation();
+
+});
+
      });
     
     
