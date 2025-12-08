@@ -1,3 +1,6 @@
+import { bookPopup } from "./bookPopup.js";
+import { normalizeAuthorName } from "./all-books";  
+import { getRandomPrice } from "./all-books.js";
 
 //container --> holds ALL the books
 //bookCard --> holds ONE book
@@ -17,6 +20,9 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
     books.forEach(function(book) { // loop through each book (array)
       const bookCard = document.createElement('div'); // creates an empty <div> for ONE book
+      bookCard.classList.add("clickable-book");
+      bookCard.bookData = book;  // ← store full book object
+      bookCard.dataset.price = getRandomPrice(); // sets a random price for each book
 
       const img = document.createElement('img'); //creates an img element. 
       img.src = book.formats['image/jpeg']; // sets src to books jpeg cover
@@ -28,7 +34,7 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
       const author = document.createElement('p'); // creates author <p> element
       // if no authors, fallback to "Unknown"
-      author.textContent = book.authors.length > 0 ? book.authors[0].name : "Unknown";
+      author.textContent = book.authors.length > 0 ? normalizeAuthorName(book.authors[0].name) : "Unknown";
       author.classList.add('book-author'); 
 
       bookCard.appendChild(img); //adds image element to book-div
@@ -37,6 +43,7 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
       container.appendChild(bookCard); // adds each book block into the container on the page
     });
+    bookPopup(); // initialize popups for newly added books
   });
 
 
@@ -55,6 +62,9 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
     books.forEach(function(book) { // loop through each book (array)
       const bookCard = document.createElement('div'); // creates an empty <div> for ONE book
+      bookCard.bookData = book;
+      bookCard.classList.add("clickable-book");
+      bookCard.dataset.price = getRandomPrice(); // sets a random price for each book
 
       const img = document.createElement('img'); //creates an img element. 
       img.src = book.formats['image/jpeg']; // sets src to books jpeg cover
@@ -66,7 +76,7 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
       const author = document.createElement('p'); // creates author <p> element
       // if no authors, shows "Unknown"
-      author.textContent = book.authors.length > 0 ? book.authors[0].name : "Unknown";
+      author.textContent = book.authors.length > 0 ? normalizeAuthorName(book.authors[0].name) : "Unknown";
       author.classList.add('book-author'); 
 
       bookCard.appendChild(img); //adds image element to book-div
@@ -75,6 +85,7 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
       container.appendChild(bookCard); // adds each book block into the container on the page
     });
+    bookPopup(); // initialize popups for newly added books
   });
 
 
