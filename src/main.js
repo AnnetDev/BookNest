@@ -9,3 +9,5 @@ import { clearCart, updateCartCount } from "./scripts/cartService.js";
     clearCart();
     
 });
+
+import './scripts/scrollToTop.js';
