@@ -35,7 +35,7 @@ function initHeroSlider() {
 
     slides.forEach((slide, index) => {
         const link = document.createElement('a');
-        link.href = 'offers.html';
+        link.href = './offers.html';
         link.classList.add('slide-link'); 
         slide.appendChild(link);
 
