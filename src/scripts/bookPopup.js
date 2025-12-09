@@ -106,24 +106,20 @@ export function bookPopup() {
             }
        
 
-       const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
-       addCartBtn.addEventListener("click", () => {
-       const bookData = {
-        title: fullTitle,
-        img: imgSrc,
-        author: authors,
-        price: price
-    };
+        const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
+        addCartBtn.addEventListener("click", () => {
+        const bookData = {
+            title: fullTitle,
+            img: imgSrc,
+            author: authors,
+            price: price
+        };
 
         addToCart(bookData);
         updateCartCount();
-
-         alert("Book added to cart!");
+        
+        alert("Book added to cart!");
      });
-    
-    
     });
-
-
 });
 }
