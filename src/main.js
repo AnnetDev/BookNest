@@ -11,3 +11,4 @@ import { clearCart, updateCartCount } from "./scripts/cartService.js";
 });
 
 import './scripts/scrollToTop.js';
+import './scripts/cartPopup.js';
