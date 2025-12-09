@@ -18,7 +18,9 @@
 .hero .swiper-slide {
     height: auto;
     max-width: 420px;
-    box-shadow: variables.$default-shadow;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.4),
+        0 0 8px rgba(0, 0, 0, 0.03);
     cursor: pointer;
 }
 
@@ -68,4 +70,8 @@
 
 .hero .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: variables.$dark-brown;
+}
+
+.hero .slide-link {
+    text-decoration: none;
 }

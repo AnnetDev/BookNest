@@ -1,3 +1,4 @@
+// not used now - todo: remove later if not needed
 export function getBooks() {
     const TOTAL_PAGES = 2400;
 
