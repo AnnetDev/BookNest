@@ -12,3 +12,5 @@ import { updateSavedCount } from './scripts/save.js';
     
 });
 
+
+import './scripts/scrollToTop.js';
