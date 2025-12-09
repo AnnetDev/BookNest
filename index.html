@@ -18,11 +18,8 @@
 <body>
 
     <header class="header common-padding">
-
         <nav>
-
-            <div class="menu-icon">
-
+            <button class="menu-icon" type="button">
                 <img src="/src/images/icons/burger-icon.svg" class="icon-menu">
 
                 <!-- there is an example how to place icon code inline  -->
@@ -33,15 +30,15 @@
                             fill="black" />
                     </svg>
                 </div> -->
+            </button>
 
-
-            </div>
             <div class="logo-icon">
-                <img src="/src/images/icons/Group 93.png">
+                <a class="header-logo-link" href="/index.html">
+                    <img src="/src/images/icons/Group 93.png">
+                </a>
             </div>
 
             <ul>
-
                 <li><img src="/src/images/icons/Vector (2).png"></li>
                 <li><img src="/src/images/icons/Vector (1).png"></li>
                 <!-- Cart Icon -->
@@ -49,48 +46,53 @@
                     <img src="/src/images/icons/Vector.png" alt="cart">
                     <span id="cart-count">0</span>
                 </li>
-
-
             </ul>
-
         </nav>
 
         <div class="search-bar">
-
             <input type="text" placeholder="Search...">
             <i class="fa-solid fa-magnifying-glass"></i>
-
         </div>
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="#" class="sub-menu-link">
+            <a href="#hero" class="sub-menu-link">
                 <p class="paragraph"> Offers</p>
                 <span></span>
             </a>
             <hr>
 
-            <a href="#" class="sub-menu-link">
+            <a href="#bestsellers" class="sub-menu-link">
                 <p class="paragraph">Top sellers</p>
                 <span></span>
             </a>
             <hr>
 
-            <a href="#" class="sub-menu-link">
+            <a href="#topgenres-section" class="sub-menu-link">
+                <p class="paragraph">Top Genres</p>
+                <span></span>
+            </a>
+            <hr>
+
+            <a href="#all-books" class="sub-menu-link">
                 <p class="paragraph"> All books</p>
                 <span></span>
             </a>
+            <hr>
+
+
+            <a href="#contacts" class="sub-menu-link">
+                <p class="paragraph">Contacts</p>
+                <span></span>
+            </a>
         </div>
-
-
-
     </header>
-
+    
 
 
 
     <main>
-        <section class="hero common-padding">
+        <section class="hero common-padding" id="hero">
             <div class='lds-roller'>
                 <div></div>
                 <div></div>
@@ -105,14 +107,13 @@
                 <div class="swiper-wrapper">
                 </div>
             </div>
-            <!-- <div class="swiper-pagination"></div> -->
 
         </section>
 
         <!-- Bestsellers section-->
         <section class="best-and-top-wrapper">
 
-            <section class="bestsellers">
+            <section class="bestsellers" id="bestsellers">
                 <div class="bestsellers-title">
                     <h2>Bestsellers > </h2>
                 </div>
@@ -123,7 +124,7 @@
 
 
             <!--Top genres section-->
-            <section class="topgenres-section">
+            <section class="topgenres-section" id="topgenres-section">
                 <div class="topgenres-title">
                     <h2>Top Genres > </h2>
                 </div>
@@ -135,7 +136,7 @@
 
 
         <!--All books section-->
-        <section class="all-books">
+        <section class="all-books" id="all-books">
             <div class="books-header">
                 <div class="books-title">all books</div>
                 <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
@@ -151,7 +152,7 @@
 
 
         <!-- Contact Information Section -->
-        <div class="contact-wrapper">
+        <div class="contact-wrapper" id="contacts">
             <div class="contact-info">
                 <div class="address">
                     <h3>Address:</h3>
@@ -215,7 +216,7 @@
 
 
             </div>
-            </div>
+        </div>
 
     </footer>
    <!-- ADD TO CART POPUP -->
