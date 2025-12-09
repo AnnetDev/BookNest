@@ -18,11 +18,8 @@
 <body>
 
     <header class="header common-padding">
-
         <nav>
-
             <div class="menu-icon">
-
                 <img src="/src/images/icons/burger-icon.svg" class="icon-menu">
 
                 <!-- there is an example how to place icon code inline  -->
@@ -34,14 +31,12 @@
                     </svg>
                 </div> -->
 
-
             </div>
             <div class="logo-icon">
                 <img src="/src/images/icons/Group 93.png">
             </div>
 
             <ul>
-
                 <li><img src="/src/images/icons/Vector (2).png"></li>
                 <li><img src="/src/images/icons/Vector (1).png"></li>
                 <!-- Cart Icon -->
@@ -49,17 +44,12 @@
                     <img src="/src/images/icons/Vector.png" alt="cart">
                     <span id="cart-count">0</span>
                 </li>
-
-
             </ul>
-
         </nav>
 
         <div class="search-bar">
-
             <input type="text" placeholder="Search...">
             <i class="fa-solid fa-magnifying-glass"></i>
-
         </div>
 
 
@@ -81,73 +71,13 @@
                 <span></span>
             </a>
         </div>
-
-
-
     </header>
 
 
 
 
     <main>
-        <section class="hero common-padding">
-            <div class='lds-roller'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="hero-swiper swiper">
-                <div class="swiper-wrapper">
-                </div>
-            </div>
-            <!-- <div class="swiper-pagination"></div> -->
 
-        </section>
-
-        <!-- Bestsellers section-->
-        <section class="best-and-top-wrapper">
-
-            <section class="bestsellers">
-                <div class="bestsellers-title">
-                    <h2>Bestsellers > </h2>
-                </div>
-                <div class="books-row" id="bestsellers-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-
-
-            <!--Top genres section-->
-            <section class="topgenres-section">
-                <div class="topgenres-title">
-                    <h2>Top Genres > </h2>
-                </div>
-                <div class="books-row" id="topgenres-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-        </section>
-
-
-        <!--All books section-->
-        <section class="all-books">
-            <div class="books-header">
-                <div class="books-title">all books</div>
-                <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
-            </div>
-            <div class="books-grid common-padding">
-                <!-- Books will be dynamically inserted here -->
-
-
-
-            </div>
-            <button class="load-more">Show More</button>
-        </section>
 
 
         <!-- Contact Information Section -->
@@ -176,7 +106,7 @@
     </main>
 
     <!--Scroll to top button-->
-    <button onclick="scroll" () id="scrollBtn" title="Go to top">
+    <button onclick="scroll" id="scrollBtn" title="Go to top">
         <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
             fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
             <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
@@ -185,58 +115,25 @@
     </button>
 
     <footer class="footer common-padding">
-
         <div class="footer-content">
-
             <div class="newsletter">
-
                 <h2>newsletter</h2>
-
                 <form class="newsletter-form">
-
                     <input type="email" placeholder="Enter your email" required>
-
                     <button type="submit">Subscribe</button>
-
                 </form>
-
             </div>
 
 
 
             <div>
-
                 <a href="https:/www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-
                 <a href="https://se.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-
-
-
             </div>
             </div>
 
     </footer>
-   <!-- ADD TO CART POPUP -->
-   <div id="cart-popup-overlay" class="cart-popup-overlay">
-  <div class="cart-popup">
-    <p id="cart-popup-title" class="cart-popup-title"></p>
-
-    <div class="cart-popup-buttons">
-      <button id="continue-shopping" class="popup-btn outline">Continue shopping</button>
-      <button id="view-cart" class="popup-btn solid">View cart</button>
-    </div>
-
-    <div class="popup-info">
-      ✨ You can choose a free shipping option at checkout!*
-    </div>
-
-    <p class="members-only">* For members only</p>
-  </div>
-</div>
-
-
     <script type="module" src="/src/main.js"></script>
 </body>
 
