@@ -9,4 +9,10 @@
 @use './blocks/popup';
 @use './blocks/cart';
 @use './blocks/bestsellers';
+@use './blocks/footer';
+@use './blocks/scrollToTop';
+@use './blocks/cartpopup';
+@use './blocks/offers';
+
+@use './blocks/shopping-cart.scss'
 @use './blocks/save.scss'
