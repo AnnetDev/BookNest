@@ -123,7 +123,7 @@ export function bookPopup() {
                 closePopup();
 
                 showAddToCartPopup(fullTitle);
-                showFullSuccessAnimation();
+                //showFullSuccessAnimation();
 
             });
 
