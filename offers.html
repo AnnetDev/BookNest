@@ -33,7 +33,7 @@
             </button>
 
             <div class="logo-icon">
-                <a class="header-logo-link" href="./index.html">
+                <a class="header-logo-link" href="/index.html">
                     <img src="/src/images/icons/Group 93.png">
                 </a>
             </div>
@@ -43,14 +43,10 @@
                 <li><img src="/src/images/icons/Vector (1).png"></li>
                 <!-- Cart Icon -->
                 <li class="cart-icon">
-                    <a href="/BookNest/cart.html"> 
-                        <img src="/src/images/icons/Vector.png" alt="cart"> 
-                    </a>
-                <span id="cart-count">0</span></li>
-                
-
-                 </ul>
-
+                    <img src="/src/images/icons/Vector.png" alt="cart">
+                    <span id="cart-count">0</span>
+                </li>
+            </ul>
         </nav>
 
         <div class="search-bar">
@@ -60,30 +56,17 @@
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="#hero" class="sub-menu-link">
+            <a href="./index.html" class="sub-menu-link">
+                <p class="paragraph"> Home</p>
+                <span></span>
+            </a>
+            <hr>
+
+            <a href="#offers" class="sub-menu-link">
                 <p class="paragraph"> Offers</p>
                 <span></span>
             </a>
             <hr>
-
-            <a href="#bestsellers" class="sub-menu-link">
-                <p class="paragraph">Top sellers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#topgenres-section" class="sub-menu-link">
-                <p class="paragraph">Top Genres</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#all-books" class="sub-menu-link">
-                <p class="paragraph"> All books</p>
-                <span></span>
-            </a>
-            <hr>
-
 
             <a href="#contacts" class="sub-menu-link">
                 <p class="paragraph">Contacts</p>
@@ -91,68 +74,101 @@
             </a>
         </div>
     </header>
-    
+
 
 
 
     <main>
-        <section class="hero common-padding" id="hero">
-            <div class='lds-roller'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <section class="offers common-padding" id="offers">
+            <h1 class="offers_title">Special Deals at BookNest</h1>
+
+
+            <div class="offers-bf__container">
+                <div class="offers-bf__content">
+                    <h2 class="offers-bf__title">Black Week Extended!</h2>
+                    <p class="offers-bf__subtitle">
+                        Enjoy up to <strong>50% off all books</strong> until
+                        <strong>December 20</strong>.
+                    </p>
+                    <p class="offers-bf__text">
+                        Simply visit our store or shop online during these dates and the discount will be
+                        applied automatically.
+                    </p>
+
+                    <p class="offers-bf__note">
+                        Offer valid both in-store and online from December 1 to December 20.
+                    </p>
+                </div>
+
+                <div class="offers-bf__image-switcher">
+                    <img id="bf-rotating-image"
+                        src="./src/images/hero-images/9780226604428@2x.webp"
+                        alt="Book offer">
+                </div>
+
             </div>
-            <div class="hero-swiper swiper">
-                <div class="swiper-wrapper">
+
+
+
+            <div class="offers-seasonal__container">
+                <h2 class="offers-seasonal__title">Seasonal Book Offer</h2>
+                <div class="offers-seasonal__wrapper">
+                    <div class="offers-seasonal__image">
+                        <img src="./src/images/offers-images/girl-book.webp" alt="Girl holding a book" />
+                    </div>
+                    <div class="offers-seasonal__content">
+                        <p class="offers-seasonal__subtitle">This winter, enjoy <strong>20% off all books</strong>.</p>
+                        <p class="offers-seasonal__text">
+                            Discover your next favorite read — from timeless classics to modern bestsellers.
+                            Offer valid throughout <strong>December and January</strong>.
+                        </p>
+
+                        <button id="offers-seasonal-generate-btn" class="offers-seasonal__generate-btn">
+                            Generate Unique offers-seasonal Code
+                        </button>
+
+                        <div id="offers-seasonal-code-box" class="offers-seasonal__code-box hidden">
+                            <span id="offers-seasonal-code-value"></span>
+                            <p class="offers-seasonal__note">
+                                Present this code in-store or enter it at checkout online.
+                            </p>
+                            <span>The promo code can only be used once and discounts cannot be combined with other
+                                offers</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
+            <div class="offers-kids-sale__container">
+                <div class="offers-kids-sale__content">
+                    <h2 class="offers-kids-sale__title">Kids Winter Book Sale</h2>
+
+                    <p class="offers-kids-sale__subtitle">
+                        Enjoy special discounts on all children's books from
+                        <strong>December through the end of January</strong>.
+                    </p>
+
+                    <p class="offers-kids-sale__text">
+                        From bedtime stories to colorful picture books — stock up on winter reads
+                        your kids will love. Discounts are applied automatically in-store and online.
+                    </p>
+
+                    <p class="offers-kids-sale__note">
+                        Valid December 1 – January 31 in all BookNest stores and online.
+                    </p>
+                </div>
+
+                <div class="offers-kids-sale__image">
+                    <img src="./src/images/offers-images/kid-book.webp" alt="Children reading books">
+                </div>
+
+            </div>
+        </section>
+
 
         </section>
 
-        <!-- Bestsellers section-->
-        <section class="best-and-top-wrapper">
-
-            <section class="bestsellers" id="bestsellers">
-                <div class="bestsellers-title">
-                    <h2>Bestsellers > </h2>
-                </div>
-                <div class="books-row" id="bestsellers-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-
-
-            <!--Top genres section-->
-            <section class="topgenres-section" id="topgenres-section">
-                <div class="topgenres-title">
-                    <h2>Top Genres > </h2>
-                </div>
-                <div class="books-row" id="topgenres-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-        </section>
-
-
-        <!--All books section-->
-        <section class="all-books" id="all-books">
-            <div class="books-header">
-                <div class="books-title">all books</div>
-                <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
-            </div>
-            <div class="books-grid common-padding">
-                <!-- Books will be dynamically inserted here -->
-
-
-
-            </div>
-            <button class="load-more">Show More</button>
-        </section>
 
 
         <!-- Contact Information Section -->
@@ -223,26 +239,8 @@
         </div>
 
     </footer>
-   <!-- ADD TO CART POPUP -->
-   <div id="cart-popup-overlay" class="cart-popup-overlay">
-  <div class="cart-popup">
-    <p id="cart-popup-title" class="cart-popup-title"></p>
+    <script type="module" src="/src/offers-main.js"></script>
 
-    <div class="cart-popup-buttons">
-      <button id="continue-shopping" class="popup-btn outline">Continue shopping</button>
-      <button id="view-cart" class="popup-btn solid">View cart</button>
-    </div>
-
-    <div class="popup-info">
-      ✨ You can choose a free shipping option at checkout!*
-    </div>
-
-    <p class="members-only">* For members only</p>
-  </div>
-</div>
-
-
-    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

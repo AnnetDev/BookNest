@@ -1,5 +1,6 @@
 import { normalizeAuthorName } from "./all-books";  
 import { addToCart, updateCartCount } from "./cartService.js";
+import { showAddToCartPopup } from "./cartPopup.js";
 
 const body = document.querySelector('body');
 
@@ -115,11 +116,17 @@ export function bookPopup() {
             price: price
         };
 
-        addToCart(bookData);
-        updateCartCount();
-        
-        alert("Book added to cart!");
+    addToCart(bookData);
+    updateCartCount();
+
+    closePopup();
+
+    showAddToCartPopup(fullTitle); 
+
+});
+
      });
     });
-});
-}
+
+
+};

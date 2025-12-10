@@ -1,0 +1,355 @@
+@use '../common/variables';
+
+.offers {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .offers_title {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 32px;
+        color: variables.$dark-brown;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 32px;
+        }
+    }
+}
+
+.offers-bf {
+    &__container {
+        background: variables.$dark-brown;
+        color: variables.$main-white;
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: variables.$default-shadow;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 15px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            justify-items: center;
+            padding: 40px;
+        }
+    }
+
+    &__content {
+        max-width: 480px;
+        text-align: center;
+
+        // @media (min-width: variables.$tablet-breakpoint) {
+        //     text-align: left;
+        // }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: variables.$beige;
+        margin-bottom: 10px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 28px;
+        }
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            font-size: 36px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        margin-bottom: 14px;
+        color: variables.$main-white;
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        color: variables.$main-white;
+        line-height: 1.6;
+        margin-bottom: 14px;
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+
+    &__note {
+        font-size: 14px;
+        color: variables.$main-white;
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+
+    &__image-switcher {
+        width: 200px;
+        height: 300px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.45);
+        margin: 0 auto;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            width: 250px;
+            height: 350px;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.6s ease;
+        }
+    }
+}
+
+
+.offers-seasonal {
+    &__container {
+        // background: variables.$beige;
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.3),
+            0 2px 8px rgba(0, 0, 0, 0.03);
+        margin-bottom: 40px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            padding: 32px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            flex-flow: row wrap;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: variables.$dark-brown;
+        margin-bottom: 8px;
+        text-align: center;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 26px;
+        }
+    }
+
+    &__image {
+        width: 230px;
+        height: auto;
+        border-radius: 16px;
+        overflow: hidden;
+        margin: 0 auto 16px auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        max-width: 480px;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            margin-top: 40px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        color: variables.$light-brown;
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        color: variables.$dark-brown;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        font-size: 1.2rem;
+
+    }
+
+    &__generate-btn {
+        background: variables.$light-brown;
+        color: variables.$main-white;
+        padding: 15px 18px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 14px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: variables.$dark-brown;
+        }
+
+        &:active {
+            scale: 0.9;
+        }        
+    }
+
+    &__generate-btn.disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    &__code-box {
+        background: variables.$main-white;
+        border: 1px solid variables.$light-brown;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: variables.$default-shadow;
+        text-align: center;
+        margin-bottom: 16px;
+
+        &.hidden {
+            display: none;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            color: variables.$dark-brown;
+            margin-bottom: 8px;
+        }
+
+        .offers-seasonal__note {
+            font-size: 14px;
+            color: variables.$light-brown;
+        }
+    }
+}
+
+
+.offers-kids-sale {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__content {
+        text-align: center;
+        padding: 20px;
+        background: variables.$beige;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        box-shadow: variables.$default-shadow;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            gap: 15px;
+        }
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            gap: 25px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 800;
+        color: variables.$dark-brown;
+        margin-bottom: 10px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 36px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        color: variables.$light-brown;
+        margin-bottom: 14px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        color: variables.$dark-brown;
+        line-height: 1.6;
+        margin-bottom: 14px;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 18px;
+        }
+    }
+
+    &__note {
+        font-size: 14px;
+        color: variables.$light-brown;
+
+        @media (min-width: variables.$tablet-breakpoint) {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        box-shadow: variables.$default-shadow;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.offers-seasonal__copy-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    background-color: variables.$light-brown;
+    color: variables.$main-white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: variables.$default-shadow;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: variables.$dark-brown;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+
+}
