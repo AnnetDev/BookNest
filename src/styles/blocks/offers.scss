@@ -166,6 +166,11 @@
             height: 100%;
             object-fit: cover;
         }
+
+        @media (min-width: variables.$desktop-breakpoint) {
+            width: 250px;
+
+        }
     }
 
     &__content {
