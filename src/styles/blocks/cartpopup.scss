@@ -1,6 +1,6 @@
 .cart-popup-overlay {
   position: fixed;
-  bottom: 0;
+  top: 40%;
   left: 0;
   right: 0;
   display: none;
@@ -49,6 +49,8 @@
 .popup-btn.solid {
   background: #c43727;
   color: #fff;
+  text-decoration: none;
+  text-align: center;
 }
 
 .popup-btn.outline {

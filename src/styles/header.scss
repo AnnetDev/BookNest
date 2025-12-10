@@ -1,11 +1,11 @@
 @use './common/variables.scss';
 
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+// body {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// } // looks like this style is not needed here 
 
 
 .header.common-padding {
@@ -14,6 +14,7 @@ body {
     background-color: #fff;
     position: relative;
     box-shadow: 0px 0px 5px rgb(206, 205, 205);
+    padding-top: 20px;
 }
 
 
@@ -33,6 +34,7 @@ nav {
     cursor: pointer;
     padding: 10px;
     transition: all 0.3s ease;
+    margin-right: 51px;
 
     &:hover, &:focus {
         opacity: 0.8;
@@ -46,12 +48,11 @@ nav {
         display: block;
         width: 24px;
     }
-
-
 }
 
 .logo-icon {
-    margin-left: 6rem;
+    // margin-left: 6rem;
+    margin: 0 auto;
 }
 
 ul {
@@ -61,6 +62,7 @@ ul {
     padding: 0;
     text-align: right;
     gap: 0.5rem;
+    padding: 0 10px 0 10px ;
 }
 svg {
     fill: variables.$main-black;
@@ -143,10 +145,7 @@ i {
     font-family: "Inter", sans-serif;
     text-decoration: none;
     transition: all 0.3s ease; // changed by Anna, reason: smooth transition effect
-
 }
-
-
 
 .sub-menu-link span {
     font-size: 22px;
