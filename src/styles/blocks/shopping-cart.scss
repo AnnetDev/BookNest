@@ -1,0 +1,104 @@
+@use '../common/variables';
+
+.cart-total {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.cart-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding-bottom: 0.8rem;
+}
+#order-button { 
+    width: 100%;
+    max-width: 390px;
+    padding: 12px;
+    background-color: variables.$light-brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: variables.$default-shadow;
+}
+#continue-shopping-button {
+    width: 100%;
+    max-width: 390px;
+    padding: 12px;
+    background-color: white;
+    color: variables.$dark-brown;
+    border: 1px solid variables.$dark-brown;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: variables.$default-shadow;
+}
+.recommended-books {
+    background-color: variables.$beige;
+    padding: 0.1rem 0.5rem 0rem 0.5rem;
+}
+.contact-wrapper {
+    margin-top: 0;
+}
+ .cart-item {
+    background-color: variables.$beige;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+.cart-item p{
+    line-height: 1rem;
+}
+.book-author {
+    margin-top: -0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.cart-item img{
+    margin: 1rem;
+    box-shadow: variables.$default-shadow;
+    height: 130px;
+}
+
+.fa-heart{
+    margin-top: 2px;    
+}
+  
+.icons-column {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    justify-items: end;
+}
+.cart-icons{
+    font-size: 1.2rem;
+    margin: 1.1rem 0.4rem;
+    align-self: start;
+}
+
+.count-icons {
+    font-size: 1.1rem;
+    align-self: end;    
+    margin: 1.1rem 0.4rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;   
+}
+.fa-square-plus, .fa-square-minus {
+    background-color: variables.$light-brown;
+    opacity: 0.7;
+}
+.fa-regular{
+    margin: 0.3rem;
+}

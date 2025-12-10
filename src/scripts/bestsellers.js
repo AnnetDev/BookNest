@@ -1,5 +1,5 @@
 import { bookPopup } from "./bookPopup.js";
-import { normalizeAuthorName } from "./all-books";  
+import { normalizeAuthorName } from "./all-books.js";  
 import { getRandomPrice } from "./all-books.js";
 
 //container --> holds ALL the books
@@ -15,6 +15,9 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
 
     const container = document.getElementById('bestsellers-container'); //selecting container where the books will be displayed, adds books dynamically.
 
+    if(!container) {
+      return; // exit if container not found
+    }
     // from the API it takes and displays a number of books
     const books = data.results.slice(5, 15);
 
@@ -56,7 +59,10 @@ fetch('https://gutendex.com/books?languages=en') // fetching data from the API
   .then(function(data) { // the data with the parsed response with a title, authors & formats etc
 
     const container = document.getElementById('topgenres-container'); //selecting container where the books will be displayed, adds books dynamically.
-
+    
+    if(!container) {
+      return; // exit if container not found
+    }
     // from the API it takes and displays a number of books
     const books = data.results.slice(16, 24);
 

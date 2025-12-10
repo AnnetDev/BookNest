@@ -55,7 +55,8 @@ export function updateCartCount() {
     countEl.style.display = "none";
   }
 }
-function showFullSuccessAnimation() {
+
+export function showFullSuccessAnimation() {
     // Create overlay
     const overlay = document.createElement("div");
     overlay.classList.add("success-overlay");
@@ -87,7 +88,7 @@ function showFullSuccessAnimation() {
     setTimeout(() => {
         overlay.classList.remove("visible");
         overlay.addEventListener("transitionend", () => overlay.remove());
-    }, 1600);
+    }, 3000);
 }
 
 
