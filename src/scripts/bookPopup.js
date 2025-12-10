@@ -1,8 +1,8 @@
 import { normalizeAuthorName } from "./all-books";
 import { addToCart, updateCartCount } from "./cartService.js";
 import { showAddToCartPopup } from "./cartPopup.js";
-import { showFullSuccessAnimation } from "./cartService.js";
 import { addToSaved, updateSavedCount } from "./save.js"; 
+import { showFullSuccessAnimation } from "./cartService.js";
 
 const body = document.querySelector('body');
 
@@ -94,20 +94,6 @@ export function bookPopup() {
                 </div>
                 <p class="popup-price"> ${price} SEK </p>
             `;
-
-            // 8. ADD TO CART LOGIC
-            const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
-            addCartBtn.addEventListener("click", () => {
-                const bookData = {
-                    title: fullTitle,
-                    img: imgSrc,
-                    author: authors,
-                    price: price
-                };
-                addToCart(bookData);
-                updateCartCount();
-                alert("Book added to cart!");
-            });
 
             // 9. SAVE BUTTON LOGIC (New)
             const saveBtn = buttonsDiv.querySelector(".save-btn");
