@@ -46,11 +46,13 @@ function loadRandomBooks() {
         bookEl.dataset.price = getRandomPrice();
 
         const authors = book.authors.map(a => normalizeAuthorName(a.name)).join(', ');
-        const imgSrc = book.formats['image/jpeg'] || '';
+        const imgSrc = book.formats['image/webp'] ||
+          book.formats['image/jpeg'] ||
+          book.formats['image/png'] ||'';
         const shortTitle = getShortestTitle(book);
 
         bookEl.innerHTML = `
-          <img src="${imgSrc}" alt="${book.title}">
+          <img src="${imgSrc}" alt="${book.title}" loading="lazy" >
           <h3>${shortTitle}</h3>
           <p>${authors}</p>
         `;
