@@ -11,8 +11,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/images/favicons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="BookNest" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <title>BookNest</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <title>Wishlist</title>
 </head>
 
 <body>
@@ -21,29 +21,21 @@
         <nav>
             <button class="menu-icon" type="button">
                 <img src="/src/images/icons/burger-icon.svg" class="icon-menu">
-
-                <!-- there is an example how to place icon code inline  -->
-                <!-- <div class="icon-menu">
-                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0 1.25C0 0.558594 0.558594 0 1.25 0H16.25C16.9414 0 17.5 0.558594 17.5 1.25C17.5 1.94141 16.9414 2.5 16.25 2.5H1.25C0.558594 2.5 0 1.94141 0 1.25ZM0 7.5C0 6.80859 0.558594 6.25 1.25 6.25H16.25C16.9414 6.25 17.5 6.80859 17.5 7.5C17.5 8.19141 16.9414 8.75 16.25 8.75H1.25C0.558594 8.75 0 8.19141 0 7.5ZM17.5 13.75C17.5 14.4414 16.9414 15 16.25 15H1.25C0.558594 15 0 14.4414 0 13.75C0 13.0586 0.558594 12.5 1.25 12.5H16.25C16.9414 12.5 17.5 13.0586 17.5 13.75Z"
-                            fill="black" />
-                    </svg>
-                </div> -->
             </button>
 
             <div class="logo-icon">
-                <a class="header-logo-link" href="/index.html">
-                    <img src="/src/images/icons/Group 93.png">
+                <a class="header-logo-link" href="./index.html">
+                    <img src="/src/images/icons/logo-icon.svg">
                 </a>
             </div>
 
             <ul>
+                <!--Profile icon-->
                 <li><img src="/src/images/icons/Vector (2).png"></li>
 
 
 
-                 <!--Wishlist icon-->
+                <!--Wishlist icon-->
                 <li>
                      <a href="wishlist.html">
                         <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,11 +44,17 @@
                      </a>
                 </li>
 
-
-
+                
+                
                 <!-- Cart Icon -->
-                <li class="cart-icon">
-                    <img src="/src/images/icons/Vector.png" alt="cart">
+               <li class="cart-icon">
+                    <a href="./cart.html">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z"
+                                fill="black" />
+                        </svg>
+                    </a>
                     <span id="cart-count">0</span>
                 </li>
             </ul>
@@ -69,26 +67,8 @@
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="#hero" class="sub-menu-link">
-                <p class="paragraph"> Offers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#bestsellers" class="sub-menu-link">
-                <p class="paragraph">Top sellers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#topgenres-section" class="sub-menu-link">
-                <p class="paragraph">Top Genres</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#all-books" class="sub-menu-link">
-                <p class="paragraph"> All books</p>
+            <a href="./index.html" class="sub-menu-link">
+                <p class="paragraph">Home</p>
                 <span></span>
             </a>
             <hr>
@@ -100,70 +80,38 @@
             </a>
         </div>
     </header>
+
+
     
+          <main>
+            <section class="wishlist common-padding">
+                <div class="wishlist-header">
+                    <div class="wishlist-title">
+                        <h2>My Wishlist</h2>
+                    </div>
+                
 
 
+                <div class="wishlist-button">
+                    <button id="add-all-to-cart">Add all to cart   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z"
+                                 />
+                        </svg>
+                    </button>
+                </div>
+                </div>
 
-    <main>
-        <section class="hero common-padding" id="hero">
-            <div class='lds-roller'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+             
+
+            <div id="wishlist-items-container">
+            <!--add wishlist items here dynamically -->
             </div>
-            <div class="hero-swiper swiper">
-                <div class="swiper-wrapper">
-                </div>
-            </div>
 
-        </section>
-
-        <!-- Bestsellers section-->
-        <section class="best-and-top-wrapper">
-
-            <section class="bestsellers" id="bestsellers">
-                <div class="bestsellers-title">
-                    <h2>Bestsellers > </h2>
-                </div>
-                <div class="books-row" id="bestsellers-container">
-                    <!-- books added here dynamically from API-->
-                </div>
             </section>
 
 
-            <!--Top genres section-->
-            <section class="topgenres-section" id="topgenres-section">
-                <div class="topgenres-title">
-                    <h2>Top Genres > </h2>
-                </div>
-                <div class="books-row" id="topgenres-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-        </section>
-
-
-        <!--All books section-->
-        <section class="all-books" id="all-books">
-            <div class="books-header">
-                <div class="books-title">all books</div>
-                <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
-            </div>
-            <div class="books-grid common-padding">
-                <!-- Books will be dynamically inserted here -->
-
-
-
-            </div>
-            <button class="load-more">Show More</button>
-        </section>
-
-
+   
         <!-- Contact Information Section -->
         <div class="contact-wrapper" id="contacts">
             <div class="contact-info">
@@ -232,7 +180,8 @@
         </div>
 
     </footer>
-    <script type="module" src="/src/main.js"></script>
+<script type="module" src="./src/scripts/wishlist-main.js"></script>
 </body>
 
 </html>
+
