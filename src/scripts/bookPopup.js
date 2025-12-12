@@ -1,5 +1,7 @@
-import { normalizeAuthorName } from "./all-books";  
+import { normalizeAuthorName } from "./all-books";
 import { addToCart, updateCartCount } from "./cartService.js";
+import { showAddToCartPopup } from "./cartPopup.js";
+import { showFullSuccessAnimation } from "./cartService.js";
 
 const body = document.querySelector('body');
 
@@ -66,8 +68,8 @@ export function bookPopup() {
             // popupContentVisual.innerHTML = `
             // <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
             // ${book.querySelector('img').outerHTML}`;
-            
-            const data = book.bookData; 
+
+            const data = book.bookData;
             const price = book.dataset.price;
 
             const fullTitle = data.title;
@@ -104,26 +106,29 @@ export function bookPopup() {
                 if (popupContainer.contains(e.target)) return;
                 closePopup();
             }
-       
 
-       const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
-       addCartBtn.addEventListener("click", () => {
-       const bookData = {
-        title: fullTitle,
-        img: imgSrc,
-        author: authors,
-        price: price
-    };
 
-        addToCart(bookData);
-        updateCartCount();
+            const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
+            addCartBtn.addEventListener("click", () => {
+                const bookData = {
+                    title: fullTitle,
+                    img: imgSrc,
+                    author: authors,
+                    price: price
+                };
 
-         alert("Book added to cart!");
-     });
-    
-    
+                addToCart(bookData);
+                updateCartCount();
+
+                closePopup();
+
+                showAddToCartPopup(fullTitle);
+                // showFullSuccessAnimation();
+
+            });
+
+        });
     });
 
 
-});
-}
+};

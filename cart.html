@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <header class="header common-padding">
         <nav>
             <button class="menu-icon" type="button">
@@ -64,26 +63,8 @@
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="#hero" class="sub-menu-link">
-                <p class="paragraph"> Offers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#bestsellers" class="sub-menu-link">
-                <p class="paragraph">Top sellers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#topgenres-section" class="sub-menu-link">
-                <p class="paragraph">Top Genres</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#all-books" class="sub-menu-link">
-                <p class="paragraph"> All books</p>
+            <a href="./index.html" class="sub-menu-link">
+                <p class="paragraph">Home</p>
                 <span></span>
             </a>
             <hr>
@@ -95,100 +76,59 @@
         </div>
     </header>
 
-
     <main>
-        <section class="hero common-padding" id="hero">
-            <div class='lds-roller'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <section class="cart common-padding">
+            <div class='cart-title'>
+                <h2>Shopping Cart</h2>
             </div>
-            <div class="hero-swiper swiper">
-                <div class="swiper-wrapper">
-                </div>
+            <div id="cart-items-container">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: </h3> 
+                <h3><span id="cart-total-amount">0</span> SEK</h3>
+            </div>
+            <div class="cart-buttons">
+                <button id="order-button">order</button> 
+                <button id="continue-shopping-button">continue shopping</button>
             </div>
 
         </section>
+    
 
-        <!-- Bestsellers section-->
-        <section class="best-and-top-wrapper">
-
-            <section class="bestsellers" id="bestsellers">
-                <div class="bestsellers-title">
-                    <h2>Bestsellers > </h2>
-                </div>
-                <div class="books-row" id="bestsellers-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-
-
-            <!--Top genres section-->
-            <section class="topgenres-section" id="topgenres-section">
-                <div class="topgenres-title">
-                    <h2>Top Genres > </h2>
-                </div>
-                <div class="books-row" id="topgenres-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-        </section>
-
-
-        <!--All books section-->
-        <section class="all-books" id="all-books">
-            <div class="books-header">
-                <div class="books-title">all books</div>
-                <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
-            </div>
-            <div class="books-grid common-padding">
-                <!-- Books will be dynamically inserted here -->
-
-
-
-            </div>
-            <button class="load-more">Show More</button>
-        </section>
-
-
-        <!-- Contact Information Section -->
-        <div class="contact-wrapper" id="contacts">
-            <div class="contact-info">
-                <div class="address">
-                    <h3>Address:</h3>
-                    <p>Virkesvägen 2 120<br>
-                        30 Stockholm</p>
-                </div>
-
-                <div class="contact-details">
-                    <p><i class="fa-solid fa-phone"></i> +46 072 657033</p>
-                    <p><i class="fa-solid fa-envelope"></i>booknest@nest.com</p>
-                </div>
+       <!-- Contact Information Section -->
+       <div class="contact-wrapper" id="contacts">
+        <div class="contact-info">
+            <div class="address">
+                <h3>Address:</h3>
+                <p>Virkesvägen 2 120<br>
+                    30 Stockholm</p>
             </div>
 
-            <!-- Map Section -->
-            <div class="map-section">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
-                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="contact-details">
+                <p><i class="fa-solid fa-phone"></i> +46 072 657033</p>
+                <p><i class="fa-solid fa-envelope"></i>booknest@nest.com</p>
             </div>
-    </main>
+        </div>
 
-    <!--Scroll to top button-->
-    <button onclick="scroll" () id="scrollBtn" title="Go to top">
-        <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
-            fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
-            <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-        </svg>
-    </button>
+        <!-- Map Section -->
+        <div class="map-section">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+</main>
+
+<!--Scroll to top button-->
+<button onclick="scroll" () id="scrollBtn" title="Go to top">
+    <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
+        fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+        <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+    </svg>
+</button>
 
     <footer class="footer common-padding">
 
@@ -199,7 +139,6 @@
                 <h2>newsletter</h2>
 
                 <form class="newsletter-form">
-                <form class="Newsletter-form"> 
 
                     <input type="email" placeholder="Enter your email" required>
 
@@ -213,8 +152,7 @@
 
             <div>
 
-                <a href="https:/www.facebook.com/"> target="_blank">
-                    <image src="src/images/icons/facebook.png" alt=go to link></a>
+                <a href="https:/www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
 
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
 
@@ -226,26 +164,7 @@
         </div>
 
     </footer>
-    <!-- ADD TO CART POPUP -->
-    <div id="cart-popup-overlay" class="cart-popup-overlay">
-        <div class="cart-popup">
-            <p id="cart-popup-title" class="cart-popup-title"></p>
-
-            <div class="cart-popup-buttons">
-                <button id="continue-shopping" class="popup-btn outline">Continue shopping</button>
-                <a href="./cart.html" id="view-cart" class="popup-btn solid">View cart</a>
-            </div>
-
-            <div class="popup-info">
-                ✨ You can choose a free shipping option at checkout!*
-            </div>
-
-            <p class="members-only">* For members only</p>
-        </div>
-    </div>
-
-
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/cart-main.js"></script>
 </body>
 
 </html>
