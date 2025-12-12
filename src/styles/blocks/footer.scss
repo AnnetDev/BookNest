@@ -31,7 +31,8 @@
 .Newsletter-form { 
 
   display: flex; 
-  align-items: center; 
+  align-items: center;
+  height: 50px; 
 
 } 
 
@@ -45,8 +46,8 @@
 
   border-radius: 20px 0 0 20px; 
   
-  height: 45px;
-
+  height: 100%;
+margin: 0;
 width: 220px;
 
 } 
@@ -69,8 +70,8 @@ width: 220px;
 
   cursor: pointer; 
 
-  height: 50px;
-
+ margin: 0;
+height: 100%;
 } 
 
  
