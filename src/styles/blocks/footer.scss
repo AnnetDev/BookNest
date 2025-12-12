@@ -10,7 +10,6 @@
 
 } 
 
- 
 
 .footer-content { 
 
@@ -20,7 +19,7 @@
 
   display: flex; 
 
-justify-content: space-between; 
+ justify-content: space-between; 
 
     align-items: center; 
 
@@ -29,40 +28,40 @@ justify-content: space-between;
 } 
 
  
-
-.newsletter-form { 
+.Newsletter-form { 
 
   display: flex; 
-
-  align-items: left; 
-
-} 
-
- 
-
-.newsletter-form input{ 
-
-  padding: 10px; 
-
-  border: none; 
-
-  border-radius: 20px 0 0 20px; 
-
-outline: none; 
-
-width: 220px 
+  align-items: center; 
 
 } 
 
  
 
-.newsletter-form button{ 
+.Newsletter-form input { 
 
   padding: 10px 20px; 
 
   border: none; 
 
-  background-color: #91735D; 
+  border-radius: 20px 0 0 20px; 
+  
+  height: 45px;
+
+width: 220px;
+
+} 
+
+ 
+
+.Newsletter-form button { 
+
+  margin: auto;
+
+  padding: 15px 25px; 
+
+  border: none; 
+
+  background-color: #47362a; 
 
   color: #fff; 
 
@@ -70,37 +69,31 @@ width: 220px
 
   cursor: pointer; 
 
+  height: 50px;
+
 } 
 
  
 
-.social-icons a,
-.social-iconsa:visited
-social icons a:active { 
+.social-icons { 
 
-  color: #fff; 
+    display: flex;
 
-  margin-left:20px; 
-
-  font-size: 20px; 
-
-  text-decoration: none; 
+    gap: 20px;
  
 } 
 
-.social-icons a { 
+.social-icons img { 
 
-  color: #fff; 
+  width: 32px;
 
-  margin-left:20px; 
+  height: 32px;
 
-  font-size: 20px; 
-
-  text-decoration: none; 
-
+  display: block;
+  
 }
 
-.social-icons a:hover { 
+.social-icons img:hover { 
 
   opacity: 0.7;
 }
