@@ -29,6 +29,7 @@
     margin-bottom: 5px;
     display: flex;
     align-items: center;
+    gap: 10px;
     
 }
 .contact-info h3 {
@@ -42,6 +43,22 @@
     height: 350px;
     display: block;
 }
+
+.contact-details a {
+    color: inherit;        
+    text-decoration: none; 
+}
+
+.contact-details a:hover {
+    text-decoration: underline; 
+}
+.phone-row a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: row; 
