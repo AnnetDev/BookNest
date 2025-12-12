@@ -31,17 +31,21 @@
             <ul>
                 <li>
                     <svg width="13" height="17" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.75 11.25C12.8578 11.25 15.375 8.73281 15.375 5.625C15.375 2.51719 12.8578 0 9.75 0C6.64219 0 4.125 2.51719 4.125 5.625C4.125 8.73281 6.64219 11.25 9.75 11.25ZM8.35781 13.875C3.74062 13.875 0 17.6156 0 22.2328C0 23.0016 0.623437 23.625 1.39219 23.625H18.1078C18.8766 23.625 19.5 23.0016 19.5 22.2328C19.5 17.6156 15.7594 13.875 11.1422 13.875H8.35781Z" fill="black"/>
-                        </svg>                        
+                        <path
+                            d="M9.75 11.25C12.8578 11.25 15.375 8.73281 15.375 5.625C15.375 2.51719 12.8578 0 9.75 0C6.64219 0 4.125 2.51719 4.125 5.625C4.125 8.73281 6.64219 11.25 9.75 11.25ZM8.35781 13.875C3.74062 13.875 0 17.6156 0 22.2328C0 23.0016 0.623437 23.625 1.39219 23.625H18.1078C18.8766 23.625 19.5 23.0016 19.5 22.2328C19.5 17.6156 15.7594 13.875 11.1422 13.875H8.35781Z"
+                            fill="black" />
+                    </svg>
                 </li>
                 <li>
                     <!-- TODO add href for wish list page -->
-                    <a href="#"> 
+                    <a href="#">
                         <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.6066 9.53553L10.9497 15.1924C10.1687 15.9734 8.90237 15.9734 8.12132 15.1924L2.46447 9.53553C0.511845 7.58291 0.511845 4.41709 2.46447 2.46447C4.41709 0.511845 7.58291 0.511845 9.53553 2.46447C11.4882 0.511845 14.654 0.511845 16.6066 2.46447C18.5592 4.41709 18.5592 7.58291 16.6066 9.53553Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <path
+                                d="M16.6066 9.53553L10.9497 15.1924C10.1687 15.9734 8.90237 15.9734 8.12132 15.1924L2.46447 9.53553C0.511845 7.58291 0.511845 4.41709 2.46447 2.46447C4.41709 0.511845 7.58291 0.511845 9.53553 2.46447C11.4882 0.511845 14.654 0.511845 16.6066 2.46447C18.5592 4.41709 18.5592 7.58291 16.6066 9.53553Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </a>
-                    </li>
+                </li>
                 <!-- Cart Icon -->
                 <li class="cart-icon">
                     <a href="./cart.html">
@@ -85,85 +89,67 @@
                 <!-- Cart items will be dynamically added here -->
             </div>
             <div class="cart-total">
-                <h3>Total: </h3> 
+                <h3>Total: </h3>
                 <h3><span id="cart-total-amount">0</span> SEK</h3>
             </div>
             <div class="cart-buttons">
-                <button id="order-button">order</button> 
+                <button id="order-button">order</button>
                 <button id="continue-shopping-button">continue shopping</button>
             </div>
-
         </section>
-    
 
-       <!-- Contact Information Section -->
-       <div class="contact-wrapper" id="contacts">
-        <div class="contact-info">
-            <div class="address">
-                <h3>Address:</h3>
-                <p>Virkesvägen 2 120<br>
-                    30 Stockholm</p>
+
+        <!-- Contact Information Section -->
+        <div class="contact-wrapper" id="contacts">
+            <div class="contact-info">
+                <div class="address">
+                    <h3>Address:</h3>
+                    <p>Virkesvägen 2 120<br>
+                        30 Stockholm</p>
+                </div>
+
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-phone"></i> +46 072 657033</p>
+                    <p><i class="fa-solid fa-envelope"></i>booknest@nest.com</p>
+                </div>
             </div>
 
-            <div class="contact-details">
-                <p><i class="fa-solid fa-phone"></i> +46 072 657033</p>
-                <p><i class="fa-solid fa-envelope"></i>booknest@nest.com</p>
+            <!-- Map Section -->
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-        </div>
+    </main>
 
-        <!-- Map Section -->
-        <div class="map-section">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
-                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-</main>
-
-<!--Scroll to top button-->
-<button onclick="scroll" () id="scrollBtn" title="Go to top">
-    <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
-        fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
-        <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-            stroke-linejoin="round"></path>
-    </svg>
-</button>
+    <!--Scroll to top button-->
+    <button onclick="scroll" () id="scrollBtn" title="Go to top">
+        <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
+            fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+            <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+        </svg>
+    </button>
 
     <footer class="footer common-padding">
-
         <div class="footer-content">
-
             <div class="newsletter">
-
                 <h2>newsletter</h2>
-
                 <form class="newsletter-form">
-
                     <input type="email" placeholder="Enter your email" required>
-
                     <button type="submit">Subscribe</button>
-
                 </form>
-
             </div>
-
-
-
             <div>
-
                 <a href="https:/www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-
                 <a href="https://se.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-
-
-
             </div>
         </div>
-
     </footer>
+
     <script type="module" src="/src/cart-main.js"></script>
 </body>
 
