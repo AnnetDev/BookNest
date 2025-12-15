@@ -13,9 +13,8 @@
     <link rel="manifest" href="/BookNest/assets/site-DI0yMH26.webmanifest" />
     <link rel="stylesheet" href="/src/styles/main.css">
     <title>BookNest</title>
-  <script type="module" crossorigin src="/BookNest/assets/offers-oJnplXG4.js"></script>
+  <script type="module" crossorigin src="/BookNest/assets/profile404-BAq_nB_o.js"></script>
   <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-uTMSSGLY.js">
-  <link rel="modulepreload" crossorigin href="/BookNest/assets/offers-image-switcher-DJa-Dkkl.js">
   <link rel="modulepreload" crossorigin href="/BookNest/assets/shopping-cart-CRFrMUjX.js">
   <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-5Tg1Mu_m.css">
 </head>
@@ -56,6 +55,7 @@
                     </a>
                     <span id="save-count">0</span>
                 </li>
+
                 <!-- Cart Icon -->
                 <li class="cart-icon">
                     <a href="./cart.html">
@@ -89,6 +89,12 @@
             </a>
             <hr>
 
+            <a href="./offers.html" class="sub-menu-link">
+                <p class="paragraph"> Offers</p>
+                <span></span>
+            </a>
+            <hr>
+
             <a href="#contacts" class="sub-menu-link">
                 <p class="paragraph">Contacts</p>
                 <span></span>
@@ -96,95 +102,15 @@
         </div>
     </header>
 
+
     <main>
-        <section class="offers common-padding" id="offers">
-            <h1 class="offers_title">Special Deals at BookNest</h1>
-
-
-            <div class="offers-bf__container">
-                <div class="offers-bf__content">
-                    <h2 class="offers-bf__title">Black Week Extended!</h2>
-                    <p class="offers-bf__subtitle">
-                        Enjoy up to <strong>50% off all books</strong> until
-                        <strong>December 20</strong>.
-                    </p>
-                    <p class="offers-bf__text">
-                        Simply visit our store or shop online during these dates and the discount will be
-                        applied automatically.
-                    </p>
-
-                    <p class="offers-bf__note">
-                        Offer valid both in-store and online from December 1 to December 20.
-                    </p>
-                </div>
-
-                <div class="offers-bf__image-switcher">
-                    <img id="bf-rotating-image" src="/BookNest/assets/9780226604428@2x-Cd8C_6or.webp" alt="Book offer">
-                </div>
-
-            </div>
-
-
-
-            <div class="offers-seasonal__container">
-                <h2 class="offers-seasonal__title">Seasonal Book Offer</h2>
-                <div class="offers-seasonal__wrapper">
-                    <div class="offers-seasonal__image">
-                        <img src="/BookNest/assets/girl-book-Z9xvAP57.webp" alt="Girl holding a book" />
-                    </div>
-                    <div class="offers-seasonal__content">
-                        <p class="offers-seasonal__subtitle">This winter, enjoy <strong>20% off all books</strong>.</p>
-                        <p class="offers-seasonal__text">
-                            Discover your next favorite read — from timeless classics to modern bestsellers.
-                            Offer valid throughout <strong>December and January</strong>.
-                        </p>
-
-                        <button id="offers-seasonal-generate-btn" class="offers-seasonal__generate-btn">
-                            Generate Unique offers-seasonal Code
-                        </button>
-
-                        <div id="offers-seasonal-code-box" class="offers-seasonal__code-box hidden">
-                            <span id="offers-seasonal-code-value"></span>
-                            <p class="offers-seasonal__note">
-                                Present this code in-store or enter it at checkout online.
-                            </p>
-                            <span>The promo code can only be used once and discounts cannot be combined with other
-                                offers</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="offers-kids-sale__container">
-                <div class="offers-kids-sale__content">
-                    <h2 class="offers-kids-sale__title">Kids Winter Book Sale</h2>
-
-                    <p class="offers-kids-sale__subtitle">
-                        Enjoy special discounts on all children's books from
-                        <strong>December through the end of January</strong>.
-                    </p>
-
-                    <p class="offers-kids-sale__text">
-                        From bedtime stories to colorful picture books — stock up on winter reads
-                        your kids will love. Discounts are applied automatically in-store and online.
-                    </p>
-
-                    <p class="offers-kids-sale__note">
-                        Valid December 1 – January 31 in all BookNest stores and online.
-                    </p>
-                </div>
-
-                <div class="offers-kids-sale__image">
-                    <img src="/BookNest/assets/kid-book-BoK71G4a.webp" alt="Children reading books">
-                </div>
-
+        <section class="notfound-page common-padding">
+            <div class="notfound-page__content">
+                <h1>404: This page burned out a bit and decided to take a nap.</h1>
+                <h2>You can, too. It’ll be back soon.</h2>
+                <img src="/BookNest/assets/404-DtPIl5SF.gif" alt="Profile page will come soon">
             </div>
         </section>
-
-
-        </section>
-
 
 
         <!-- Contact Information Section -->
@@ -254,6 +180,24 @@
         </div>
         </div>
     </footer>
+    <!-- ADD TO CART POPUP -->
+    <div id="cart-popup-overlay" class="cart-popup-overlay">
+        <div class="cart-popup">
+            <p id="cart-popup-title" class="cart-popup-title"></p>
+
+            <div class="cart-popup-buttons">
+                <button id="continue-shopping" class="popup-btn outline">Continue shopping</button>
+                <a href="./cart.html" id="view-cart" class="popup-btn solid">View cart</a>
+            </div>
+
+            <div class="popup-info">
+                ✨ You can choose a free shipping option at checkout!*
+            </div>
+
+            <p class="members-only">* For members only</p>
+        </div>
+    </div>
+
 
 </body>
 

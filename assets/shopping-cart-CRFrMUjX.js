@@ -1,4 +1,4 @@
-import{c as a,g as d,r as m,i as p,d as v}from"./scrollToTop-C8AQDK0Y.js";document.addEventListener("DOMContentLoaded",()=>{const s=document.getElementById("cart-items-container"),r=document.getElementById("cart-total-amount");if(!s)return;function n(){const o=d();let c=0;s.innerHTML="",o.forEach((t,i)=>{const e=document.createElement("div");e.classList.add("cart-item"),e.innerHTML=`
+import{c as a,g as d,r as m,i as p,d as v}from"./scrollToTop-uTMSSGLY.js";document.addEventListener("DOMContentLoaded",()=>{const s=document.getElementById("cart-items-container"),r=document.getElementById("cart-total-amount");if(!s)return;function n(){const o=d();let c=0;s.innerHTML="",o.forEach((t,i)=>{const e=document.createElement("div");e.classList.add("cart-item"),e.innerHTML=`
         <img src="${t.img}" alt="${t.title}" style="width:90px;">
         <div class="book-info">
             <h3>${t.title}</h3>
