@@ -11,11 +11,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/BookNest/assets/apple-touch-icon-BBBbdHoz.png" />
     <meta name="apple-mobile-web-app-title" content="BookNest" />
     <link rel="manifest" href="/BookNest/assets/site-DI0yMH26.webmanifest" />
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <title>Wishlist</title>
-  <script type="module" crossorigin src="/BookNest/assets/wishlist-DshZ8Nza.js"></script>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <title>BookNest</title>
+  <script type="module" crossorigin src="/BookNest/assets/main-BJLIU5JO.js"></script>
   <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-C8AQDK0Y.js">
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/offers-image-switcher-DJa-Dkkl.js">
   <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-CUgclObD.css">
+  <link rel="stylesheet" crossorigin href="/BookNest/assets/main-uGqyt-El.css">
 </head>
 
 <body>
@@ -54,9 +56,6 @@
                     <span id="save-count">0</span>
                 </li>
 
-
-
-
                 <!-- Cart Icon -->
                 <li class="cart-icon">
                     <a href="./cart.html">
@@ -78,12 +77,29 @@
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="./index.html" class="sub-menu-link">
-                <p class="paragraph">Home</p>
+            <a href="#hero" class="sub-menu-link">
+                <p class="paragraph"> Offers</p>
                 <span></span>
             </a>
             <hr>
 
+            <a href="#bestsellers" class="sub-menu-link">
+                <p class="paragraph">Top sellers</p>
+                <span></span>
+            </a>
+            <hr>
+
+            <a href="#topgenres-section" class="sub-menu-link">
+                <p class="paragraph">Top Genres</p>
+                <span></span>
+            </a>
+            <hr>
+
+            <a href="#all-books" class="sub-menu-link">
+                <p class="paragraph"> All books</p>
+                <span></span>
+            </a>
+            <hr>
 
             <a href="#contacts" class="sub-menu-link">
                 <p class="paragraph">Contacts</p>
@@ -93,34 +109,64 @@
     </header>
 
 
-
     <main>
-        <section class="wishlist common-padding">
-            <div class="wishlist-header">
-                <div class="wishlist-title">
-                    <h2>My Wishlist</h2>
-                </div>
-
-
-
-                <div class="wishlist-button">
-                    <button id="add-all-to-cart">Add all to cart <svg width="17" height="17" viewBox="0 0 17 17"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z" />
-                        </svg>
-                    </button>
-                </div>
+        <section class="hero common-padding" id="hero">
+            <div class='lds-roller'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-
-
-
-            <div id="wishlist-items-container">
-                <!--add wishlist items here dynamically -->
+            <div class="hero-swiper swiper">
+                <div class="swiper-wrapper">
+                </div>
             </div>
 
         </section>
 
+        <!-- Bestsellers section-->
+        <section class="best-and-top-wrapper">
+
+            <section class="bestsellers" id="bestsellers">
+                <div class="bestsellers-title">
+                    <h2>Bestsellers > </h2>
+                </div>
+                <div class="books-row" id="bestsellers-container">
+                    <!-- books added here dynamically from API-->
+                </div>
+            </section>
+
+
+            <!--Top genres section-->
+            <section class="topgenres-section" id="topgenres-section">
+                <div class="topgenres-title">
+                    <h2>Top Genres > </h2>
+                </div>
+                <div class="books-row" id="topgenres-container">
+                    <!-- books added here dynamically from API-->
+                </div>
+            </section>
+        </section>
+
+
+        <!--All books section-->
+        <section class="all-books" id="all-books">
+            <div class="books-header">
+                <div class="books-title">all books</div>
+                <div class="books-filter">Filter A-Z <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADuSURBVHgB1ZXhDcIgEIUfpgPgBrhBN7AjOIqdoDqBI9QNuoIjuIFu0G6AR4J6IaVQ6B++5FIK3D3uKBQoHeF2aK1rekgkIoR4eAcpeKfz6WYzoAGz6hHbsKdMJtOo8E9tIpGWmjfb9SRrIwOaVTe2ff0Gn4VEBpbuGQGcsvaIcJBkL+ZUL8xVbJ7xUYjBBHUcpSc4X4jCGkx5mPMwM96z8QtS8O3H6rovCPD9GO27TKr7gsiJBWys/d5D/ruwBCZkECOQRfkC1cr5iuyILXG+GhcV8k8t0Z3sQLfmG7k4B6vXuQfLI2IutuTfaNl8AIhGdMmrF6N/AAAAAElFTkSuQmCC" alt="filter"></div>
+            </div>
+            <div class="books-grid common-padding">
+                <!-- Books will be dynamically inserted here -->
+
+
+
+            </div>
+            <button class="load-more">Show More</button>
+        </section>
 
 
         <!-- Contact Information Section -->
@@ -170,10 +216,10 @@
         <div class="footer-content">
             <div class="newsletter">
                 <h2>Newsletter</h2>
-                <form class="Newsletter-form">
+                <form class="Newsletter-form">    
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Submit</button>
-                </form>
+                </form>    
             </div>
         </div>
 
@@ -190,6 +236,25 @@
         </div>
         </div>
     </footer>
+    <!-- ADD TO CART POPUP -->
+    <div id="cart-popup-overlay" class="cart-popup-overlay">
+        <div class="cart-popup">
+            <p id="cart-popup-title" class="cart-popup-title"></p>
+
+            <div class="cart-popup-buttons">
+                <button id="continue-shopping" class="popup-btn outline">Continue shopping</button>
+                <a href="./cart.html" id="view-cart" class="popup-btn solid">View cart</a>
+            </div>
+
+            <div class="popup-info">
+                ✨ You can choose a free shipping option at checkout!*
+            </div>
+
+            <p class="members-only">* For members only</p>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

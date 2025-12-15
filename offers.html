@@ -11,15 +11,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/BookNest/assets/apple-touch-icon-BBBbdHoz.png" />
     <meta name="apple-mobile-web-app-title" content="BookNest" />
     <link rel="manifest" href="/BookNest/assets/site-DI0yMH26.webmanifest" />
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <title>Wishlist</title>
-  <script type="module" crossorigin src="/BookNest/assets/wishlist-DshZ8Nza.js"></script>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <title>BookNest</title>
+  <script type="module" crossorigin src="/BookNest/assets/offers-CSX8O03N.js"></script>
   <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-C8AQDK0Y.js">
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/offers-image-switcher-DJa-Dkkl.js">
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/shopping-cart-CMkGxH6J.js">
   <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-CUgclObD.css">
 </head>
 
 <body>
-
     <header class="header common-padding">
         <nav>
             <button class="menu-icon" type="button">
@@ -53,10 +54,6 @@
                     </a>
                     <span id="save-count">0</span>
                 </li>
-
-
-
-
                 <!-- Cart Icon -->
                 <li class="cart-icon">
                     <a href="./cart.html">
@@ -84,7 +81,6 @@
             </a>
             <hr>
 
-
             <a href="#contacts" class="sub-menu-link">
                 <p class="paragraph">Contacts</p>
                 <span></span>
@@ -92,32 +88,92 @@
         </div>
     </header>
 
-
-
     <main>
-        <section class="wishlist common-padding">
-            <div class="wishlist-header">
-                <div class="wishlist-title">
-                    <h2>My Wishlist</h2>
+        <section class="offers common-padding" id="offers">
+            <h1 class="offers_title">Special Deals at BookNest</h1>
+
+
+            <div class="offers-bf__container">
+                <div class="offers-bf__content">
+                    <h2 class="offers-bf__title">Black Week Extended!</h2>
+                    <p class="offers-bf__subtitle">
+                        Enjoy up to <strong>50% off all books</strong> until
+                        <strong>December 20</strong>.
+                    </p>
+                    <p class="offers-bf__text">
+                        Simply visit our store or shop online during these dates and the discount will be
+                        applied automatically.
+                    </p>
+
+                    <p class="offers-bf__note">
+                        Offer valid both in-store and online from December 1 to December 20.
+                    </p>
                 </div>
 
-
-
-                <div class="wishlist-button">
-                    <button id="add-all-to-cart">Add all to cart <svg width="17" height="17" viewBox="0 0 17 17"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z" />
-                        </svg>
-                    </button>
+                <div class="offers-bf__image-switcher">
+                    <img id="bf-rotating-image" src="/BookNest/assets/9780226604428@2x-Cd8C_6or.webp" alt="Book offer">
                 </div>
+
             </div>
 
 
 
-            <div id="wishlist-items-container">
-                <!--add wishlist items here dynamically -->
+            <div class="offers-seasonal__container">
+                <h2 class="offers-seasonal__title">Seasonal Book Offer</h2>
+                <div class="offers-seasonal__wrapper">
+                    <div class="offers-seasonal__image">
+                        <img src="/BookNest/assets/girl-book-Z9xvAP57.webp" alt="Girl holding a book" />
+                    </div>
+                    <div class="offers-seasonal__content">
+                        <p class="offers-seasonal__subtitle">This winter, enjoy <strong>20% off all books</strong>.</p>
+                        <p class="offers-seasonal__text">
+                            Discover your next favorite read — from timeless classics to modern bestsellers.
+                            Offer valid throughout <strong>December and January</strong>.
+                        </p>
+
+                        <button id="offers-seasonal-generate-btn" class="offers-seasonal__generate-btn">
+                            Generate Unique offers-seasonal Code
+                        </button>
+
+                        <div id="offers-seasonal-code-box" class="offers-seasonal__code-box hidden">
+                            <span id="offers-seasonal-code-value"></span>
+                            <p class="offers-seasonal__note">
+                                Present this code in-store or enter it at checkout online.
+                            </p>
+                            <span>The promo code can only be used once and discounts cannot be combined with other
+                                offers</span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+            <div class="offers-kids-sale__container">
+                <div class="offers-kids-sale__content">
+                    <h2 class="offers-kids-sale__title">Kids Winter Book Sale</h2>
+
+                    <p class="offers-kids-sale__subtitle">
+                        Enjoy special discounts on all children's books from
+                        <strong>December through the end of January</strong>.
+                    </p>
+
+                    <p class="offers-kids-sale__text">
+                        From bedtime stories to colorful picture books — stock up on winter reads
+                        your kids will love. Discounts are applied automatically in-store and online.
+                    </p>
+
+                    <p class="offers-kids-sale__note">
+                        Valid December 1 – January 31 in all BookNest stores and online.
+                    </p>
+                </div>
+
+                <div class="offers-kids-sale__image">
+                    <img src="/BookNest/assets/kid-book-BoK71G4a.webp" alt="Children reading books">
+                </div>
+
+            </div>
+        </section>
+
 
         </section>
 
@@ -190,6 +246,7 @@
         </div>
         </div>
     </footer>
+
 </body>
 
 </html>
