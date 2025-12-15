@@ -5,6 +5,12 @@
     background: variables.$beige;
 }
 
+.bestsellers,
+.topgenres-section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 
 .bestsellers-title { /* bestsellers title */
     text-align: start;
@@ -77,9 +83,6 @@ margin-right: 10px;
   gap: 1rem; // optional but nice
 }
 /*
-
-
-
 
 #topgenres-container {
     display: flex;

@@ -3,6 +3,9 @@
 .offers {
     padding-top: 40px;
     padding-bottom: 40px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 
     .offers_title {
         font-size: 28px;
@@ -29,6 +32,11 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 15px;
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
 
         @media (min-width: variables.$tablet-breakpoint) {
             justify-items: center;
@@ -257,6 +265,11 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -269,6 +282,11 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media (max-width: 500px) {
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 0;
+        }
 
         @media (min-width: variables.$tablet-breakpoint) {
             gap: 15px;
@@ -327,6 +345,12 @@
         border-bottom-right-radius: 16px;
         box-shadow: variables.$default-shadow;
         margin: 0 auto;
+
+        @media (max-width: 500px) {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 16px;
+
+        }
 
         img {
             width: 100%;

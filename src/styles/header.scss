@@ -1,13 +1,5 @@
 @use './common/variables.scss';
 
-
-// body {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-// } // looks like this style is not needed here 
-
-
 .header.common-padding {
     max-width: 100%;
     height: 8rem;
@@ -15,6 +7,7 @@
     position: relative;
     box-shadow: 0px 0px 5px rgb(206, 205, 205);
     padding-top: 20px;
+
 }
 
 
@@ -23,6 +16,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .menu-icon {
@@ -36,7 +31,8 @@ nav {
     transition: all 0.3s ease;
     margin-right: 51px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         opacity: 0.8;
     }
 
@@ -62,7 +58,7 @@ ul {
     padding: 0;
     text-align: right;
     gap: 0.5rem;
-    padding: 0 10px 0 10px ;
+    padding: 0 10px 0 10px;
 }
 
 svg {
@@ -70,7 +66,7 @@ svg {
     width: 20px;
     height: 20px;
 }
-   
+
 
 .search-bar {
     position: relative;
@@ -141,6 +137,7 @@ i {
 .menu-icon {
     cursor: pointer;
 }
+
 .paragraph {
     padding: 10px 10px 10px 30px; // changed by Anna, reason: better alignment with the icon
     color: black;
