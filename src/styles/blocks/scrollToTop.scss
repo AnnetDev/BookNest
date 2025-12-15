@@ -17,6 +17,13 @@
     border-radius: 20rem;
     border: 1px solid variables.$dark-brown;
     font-size: 2.75rem;
+    opacity: 0.7;
+    transition: all ease 0.3s;
+    
+    svg {
+        width: auto;
+        height: auto;
+    }
 }
 
 #scrollBtn:hover {
