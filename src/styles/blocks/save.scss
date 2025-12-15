@@ -1,12 +1,21 @@
 .save-icon {
-  position: relative; /* needed for absolute positioning of badge */
+  position: relative;
+  /* needed for absolute positioning of badge */
+
+  svg {
+    scale: 1.4;
+  }
+
 }
 
 #save-count {
   position: absolute;
-  top: -6px;         /* adjust as needed */
-  right: -6px;       /* adjust as needed */
-  display: none;     /* hidden when count is 0 */
+  top: -6px;
+  /* adjust as needed */
+  right: -6px;
+  /* adjust as needed */
+  display: none;
+  /* hidden when count is 0 */
   min-width: 18px;
   height: 18px;
   padding: 0 5px;
@@ -17,6 +26,6 @@
   text-align: center;
   border-radius: 50%;
   line-height: 18px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
