@@ -1,0 +1,43 @@
+@use '../common/variables.scss';
+
+.wishlist-title h2 {
+  color: variables.$main-black;
+  font-family: variables.$main-font;
+  font-weight: normal;
+}
+
+#add-all-to-cart { //content inside the button //
+    color: variables.$main-white;
+    font-family: variables.$main-font;
+    padding: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 13px; //space between text and icon
+}
+//
+#add-all-to-cart svg path { //shopping cart icon 
+    fill: variables.$main-white;
+    
+} 
+
+.wishlist-header { //header title + button in a row
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 1.5rem;
+}
+
+.wishlist-button button {
+    background-color: #997E67;
+    border-radius: 14px;
+    border: none;
+    box-shadow: variables.$default-shadow;
+    cursor: pointer;
+    
+}
+
+.wishlist-items-container {
+    display: flex;
+}
