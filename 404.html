@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <header class="header common-padding">
         <nav>
             <button class="menu-icon" type="button">
@@ -74,32 +73,20 @@
 
 
         <div class="menu-wrapper" id="subMenu">
-            <a href="#hero" class="sub-menu-link">
-                <p class="paragraph"> Offers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#bestsellers" class="sub-menu-link">
-                <p class="paragraph">Top sellers</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#topgenres-section" class="sub-menu-link">
-                <p class="paragraph">Top Genres</p>
-                <span></span>
-            </a>
-            <hr>
-
-            <a href="#all-books" class="sub-menu-link">
-                <p class="paragraph">All books</p>
+            <a href="./index.html" class="sub-menu-link">
+                <p class="paragraph">Home</p>
                 <span></span>
             </a>
             <hr>
 
             <a href="./404.html" class="sub-menu-link">
                 <p class="paragraph">Profile</p>
+                <span></span>
+            </a>
+            <hr>
+
+            <a href="./offers.html" class="sub-menu-link">
+                <p class="paragraph"> Offers</p>
                 <span></span>
             </a>
             <hr>
@@ -113,62 +100,12 @@
 
 
     <main>
-        <section class="hero common-padding" id="hero">
-            <div class='lds-roller'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <section class="notfound-page common-padding">
+            <div class="notfound-page__content">
+                <h1>404: This page burned out a bit and decided to take a nap.</h1>
+                <h2>You can, too. It’ll be back soon.</h2>
+                <img src="./src/images/404.gif" alt="Profile page will come soon">
             </div>
-            <div class="hero-swiper swiper">
-                <div class="swiper-wrapper">
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Bestsellers section-->
-        <section class="best-and-top-wrapper">
-
-            <section class="bestsellers" id="bestsellers">
-                <div class="bestsellers-title">
-                    <h2>Bestsellers > </h2>
-                </div>
-                <div class="books-row" id="bestsellers-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-
-
-            <!--Top genres section-->
-            <section class="topgenres-section" id="topgenres-section">
-                <div class="topgenres-title">
-                    <h2>Top Genres > </h2>
-                </div>
-                <div class="books-row" id="topgenres-container">
-                    <!-- books added here dynamically from API-->
-                </div>
-            </section>
-        </section>
-
-
-        <!--All books section-->
-        <section class="all-books" id="all-books">
-            <div class="books-header">
-                <div class="books-title">all books</div>
-                <div class="books-filter">Filter A-Z <img src="src/images/icons/Funnel.png" alt="filter"></div>
-            </div>
-            <div class="books-grid common-padding">
-                <!-- Books will be dynamically inserted here -->
-
-
-
-            </div>
-            <button class="load-more">Show More</button>
         </section>
 
 
@@ -219,10 +156,10 @@
         <div class="footer-content">
             <div class="newsletter">
                 <h2>Newsletter</h2>
-                <form class="Newsletter-form">    
+                <form class="Newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Submit</button>
-                </form>    
+                </form>
             </div>
         </div>
 
@@ -258,7 +195,7 @@
     </div>
 
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/404-main.js"></script>
 </body>
 
 </html>
