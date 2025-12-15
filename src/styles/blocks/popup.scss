@@ -1,3 +1,4 @@
+
 @use '../common/variables';
 
 .popup-container {
@@ -84,6 +85,7 @@
         width: 17px;
         height: 17px;
         overflow: visible;
+        fill:none;
     }
 
     span {
@@ -103,7 +105,7 @@
 
 .popup-content {
     display: grid;
-    grid-template-columns: 0.9fr 1fr;
+    grid-template-columns: 0.8fr 1fr;
     flex-grow: 1;
     gap: 16px;
 }

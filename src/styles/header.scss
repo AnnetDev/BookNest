@@ -1,11 +1,11 @@
 @use './common/variables.scss';
 
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+// body {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// } // looks like this style is not needed here 
 
 
 .header.common-padding {
@@ -14,9 +14,8 @@ body {
     background-color: #fff;
     position: relative;
     box-shadow: 0px 0px 5px rgb(206, 205, 205);
+    padding-top: 20px;
 }
-
-
 
 
 nav {
@@ -35,6 +34,7 @@ nav {
     cursor: pointer;
     padding: 10px;
     transition: all 0.3s ease;
+    margin-right: 51px;
 
     &:hover, &:focus {
         opacity: 0.8;
@@ -48,33 +48,28 @@ nav {
         display: block;
         width: 24px;
     }
-
-
 }
 
 .logo-icon {
-    margin-left: 6rem;
+    // margin-left: 6rem;
+    margin: 0 auto;
 }
-
-
 
 ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: right;
-
-    svg {
-        fill: variables.$main-black;
-        width: 20px;
-        height: 20px;
-    }
-
-
+    gap: 0.5rem;
+    padding: 0 10px 0 10px ;
 }
-
-li {
-    margin: 3px;
+svg {
+    fill: variables.$main-black;
+    width: 20px;
+    height: 20px;
 }
+   
 
 .search-bar {
     position: relative;
@@ -83,13 +78,15 @@ li {
     background-color: rgba(234, 224, 211, 0.47);
     border-radius: 15px;
     width: 70%;
-    margin: 15px auto;
+    margin: 5px auto;
     height: 38px;
-
+    width: 800px;
+    max-width: 100%;
 }
 
 input {
-    margin-top: 8px;
+    margin-bottom: 3px;
+    margin-left: 5px;
 }
 
 
@@ -140,23 +137,25 @@ i {
     max-height: 400px;
 }
 
-
+.menu-icon {
+    cursor: pointer;
+}
 .paragraph {
     padding: 10px 10px 10px 30px; // changed by Anna, reason: better alignment with the icon
     color: black;
     font-family: "Inter", sans-serif;
     text-decoration: none;
     transition: all 0.3s ease; // changed by Anna, reason: smooth transition effect
-
 }
-
-
 
 .sub-menu-link span {
     font-size: 22px;
     transition: all 0.3s ease; // changed by Anna, reason: smooth transition effect
 }
 
+.sub-menu-link {
+    text-decoration: none;
+}
 
 .sub-menu-link:hover span {
     transform: translateX(5px);
@@ -164,27 +163,5 @@ i {
 
 .sub-menu-link:hover p {
     font-weight: 600;
-}
 
-//added by Anna
-.header-logo-link {
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover,
-    &:focus {
-        opacity: 0.8;
-    }
-
-    &:active {
-        opacity: 0.6;
-    }
-}
-
-.sub-menu-link {
-    text-decoration: none;
-    font-size: 1rem; 
-    transition: all 0.3s ease;
 }

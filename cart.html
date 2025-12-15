@@ -39,7 +39,7 @@
 
                 <!-- Cart Icon -->
                 <li class="save-icon">
-                    <a href="#">
+                    <a href="#"> 
 
                     <svg width="23" height="20" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -83,137 +83,65 @@
         </div>
     </header>
 
+
     <main>
-        <section class="offers common-padding" id="offers">
-            <h1 class="offers_title">Special Deals at BookNest</h1>
-
-
-            <div class="offers-bf__container">
-                <div class="offers-bf__content">
-                    <h2 class="offers-bf__title">Black Week Extended!</h2>
-                    <p class="offers-bf__subtitle">
-                        Enjoy up to <strong>50% off all books</strong> until
-                        <strong>December 20</strong>.
-                    </p>
-                    <p class="offers-bf__text">
-                        Simply visit our store or shop online during these dates and the discount will be
-                        applied automatically.
-                    </p>
-
-                    <p class="offers-bf__note">
-                        Offer valid both in-store and online from December 1 to December 20.
-                    </p>
-                </div>
-
-                <div class="offers-bf__image-switcher">
-                    <img id="bf-rotating-image"
-                        src="./src/images/hero-images/9780226604428@2x.webp"
-                        alt="Book offer">
-                </div>
-
+        <section class="cart common-padding">
+            <div class='cart-title'>
+                <h2>Shopping Cart</h2>
             </div>
-
-
-
-            <div class="offers-seasonal__container">
-                <h2 class="offers-seasonal__title">Seasonal Book Offer</h2>
-                <div class="offers-seasonal__wrapper">
-                    <div class="offers-seasonal__image">
-                        <img src="./src/images/offers-images/girl-book.webp" alt="Girl holding a book" />
-                    </div>
-                    <div class="offers-seasonal__content">
-                        <p class="offers-seasonal__subtitle">This winter, enjoy <strong>20% off all books</strong>.</p>
-                        <p class="offers-seasonal__text">
-                            Discover your next favorite read — from timeless classics to modern bestsellers.
-                            Offer valid throughout <strong>December and January</strong>.
-                        </p>
-
-                        <button id="offers-seasonal-generate-btn" class="offers-seasonal__generate-btn">
-                            Generate Unique offers-seasonal Code
-                        </button>
-
-                        <div id="offers-seasonal-code-box" class="offers-seasonal__code-box hidden">
-                            <span id="offers-seasonal-code-value"></span>
-                            <p class="offers-seasonal__note">
-                                Present this code in-store or enter it at checkout online.
-                            </p>
-                            <span>The promo code can only be used once and discounts cannot be combined with other
-                                offers</span>
-                        </div>
-
-                    </div>
-                </div>
+            <div id="cart-items-container">
+                <!-- Cart items will be dynamically added here -->
             </div>
-
-            <div class="offers-kids-sale__container">
-                <div class="offers-kids-sale__content">
-                    <h2 class="offers-kids-sale__title">Kids Winter Book Sale</h2>
-
-                    <p class="offers-kids-sale__subtitle">
-                        Enjoy special discounts on all children's books from
-                        <strong>December through the end of January</strong>.
-                    </p>
-
-                    <p class="offers-kids-sale__text">
-                        From bedtime stories to colorful picture books — stock up on winter reads
-                        your kids will love. Discounts are applied automatically in-store and online.
-                    </p>
-
-                    <p class="offers-kids-sale__note">
-                        Valid December 1 – January 31 in all BookNest stores and online.
-                    </p>
-                </div>
-
-                <div class="offers-kids-sale__image">
-                    <img src="./src/images/offers-images/kid-book.webp" alt="Children reading books">
-                </div>
-
+            <div class="cart-total">
+                <h3>Total: </h3> 
+                <h3><span id="cart-total-amount">0</span> SEK</h3>
             </div>
-        </section>
-
+            <div class="cart-buttons">
+                <button id="order-button">order</button> 
+                <button id="continue-shopping-button">continue shopping</button>
+            </div>
 
         </section>
+    
 
+       <!-- Contact Information Section -->
+       <div class="contact-wrapper" id="contacts">
+        <div class="contact-info">
+            <div class="address">
+                <h3>Address:</h3>
+                <p>Virkesvägen 2 120<br>
+                    30 Stockholm</p>
+            </div>
 
-
-        <!-- Contact Information Section -->
-        <div class="contact-wrapper" id="contacts">
-            <div class="contact-info">
-                <div class="address">
-                    <h3>Address:</h3>
-                    <p>Virkesvägen 2 120<br>
-                        30 Stockholm</p>
-                </div>
-
-                <div class="contact-details">
-                    <p><i class="fa-solid fa-phone"></i> 
+            <div class="contact-details">
+                <p><i class="fa-solid fa-phone"></i> 
                       <a href="tel:+46702657033">+46 072 657033</a>
                     </p>
                      <p>
                      <i class="fa-solid fa-envelope"></i>
                       <a href="mailto:booknest@nest.com">booknest@nest.com</a>
                     </p>
-                </div>
             </div>
+        </div>
 
-            <!-- Map Section -->
-            <div class="map-section">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
-                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-    </main>
+        <!-- Map Section -->
+        <div class="map-section">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80744.17810507712!2d18.022216!3d59.326242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d55d2e0b7bd%3A0x400fef341e4b0c0!2sStockholm!5e0!3m2!1sen!2sse!4v1700000000001"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+</main>
 
-    <!--Scroll to top button-->
-    <button onclick="scroll" () id="scrollBtn" title="Go to top">
-        <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
-            fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
-            <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-        </svg>
-    </button>
+<!--Scroll to top button-->
+<button onclick="scroll" () id="scrollBtn" title="Go to top">
+    <?xml version="1.0" encoding="UTF-8"?><svg width="35px" height="35px" viewBox="0 0 24 24" stroke-width="3"
+        fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+        <path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+    </svg>
+</button>
 
     <footer class="footer common-padding">
 
@@ -249,8 +177,7 @@
         </div>
 
     </footer>
-    <script type="module" src="/src/offers-main.js"></script>
-
+    <script type="module" src="/src/cart-main.js"></script>
 </body>
 
 </html>

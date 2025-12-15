@@ -1,30 +1,27 @@
 .contact-wrapper { 
-  max-width: 1500px;          
-  margin: 40px auto;         
-  padding: 0px;             
-  border-radius: 12px;
+  max-width: 100%;          
+  margin: 0;         
+  padding: 0;             
+  width:100%;
+  background: #ccbeb1;
 
 }
-
-/* ==== TOP CONTACT INFO ==== */
 .contact-info {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 40px;
     background: #ccbeb1;
     gap: 40px;
-    
+     
 }
 
 .address {
-    margin-bottom:1px;
-    
-    
+    margin-bottom:10px;
     
 }
 
 .contact-details i {
-    margin-right: 12px;
+    margin-right: 10px;
      
 }
 
@@ -32,6 +29,7 @@
     margin-bottom: 5px;
     display: flex;
     align-items: center;
+    gap: 10px;
     
 }
 .contact-info h3 {
@@ -39,19 +37,45 @@
   
 }
 
-/* ==== MAP SECTION ==== */
 .map-section iframe,
 .map-section img {
     width: 100%;
     height: 350px;
     display: block;
 }
+
+.contact-details a {
+    color: inherit;        
+    text-decoration: none; 
+}
+
+.contact-details a:hover {
+    text-decoration: underline; 
+}
+.phone-row a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     .contact-info {
-        flex-direction: row;      /* keep left + right in one row */
+        flex-direction: row; 
+         align-items: flex-start;     
     }
 
+    .address,
     .contact-details {
-        text-align: right;        /* text aligns right */
+        flex: 1;
+    }
+
+
+    .contact-details {
+        text-align: right; 
+           
+    }
+    .contact-details p {
+        justify-content: flex;   
     }
 }

@@ -1,5 +1,8 @@
-import { normalizeAuthorName } from "./all-books";  
+import { normalizeAuthorName } from "./all-books";
 import { addToCart, updateCartCount } from "./cartService.js";
+import { showAddToCartPopup } from "./cartPopup.js";
+import { addToSaved, updateSavedCount } from "./save.js"; 
+import { showFullSuccessAnimation } from "./cartService.js";
 
 const body = document.querySelector('body');
 
@@ -11,16 +14,21 @@ export function bookPopup() {
     clickedBooks.forEach(book => {
         book.addEventListener('click', () => {
 
+            // 1. Lock scroll and show overlay
             body.classList.add('overlay-active', 'overlay-no-scroll');
 
+            // 2. Create the Main Container
             const popupContainer = document.createElement('div');
             popupContainer.classList.add('popup-container');
             popupContainer.classList.add("visible");
-            body.appendChild(popupContainer);
+            body.appendChild(popupContainer); // <--- THIS WAS LIKELY MISSING
 
+            // 3. Close on Outside Click
             setTimeout(() => {
                 document.addEventListener('click', handleOutsideClick);
             }, 0);
+
+            // 4. Create Header & Close Button
             const popupHeader = document.createElement('div');
             popupHeader.classList.add('popup-header');
             popupContainer.appendChild(popupHeader);
@@ -33,9 +41,9 @@ export function bookPopup() {
                 </svg>`;
             popupHeader.appendChild(closeButton);
 
+            // 5. Create Buttons (Save & Add to Cart)
             const buttonsDiv = document.createElement('div');
             buttonsDiv.classList.add('save-cart-buttons');
-
             buttonsDiv.innerHTML = `<button class="save-btn">
                 <span>Save</span>
                 <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,12 +56,12 @@ export function bookPopup() {
                 <path d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z" fill="white"/>
                 </svg>
                 </button>`;
-
-            // content
+            
+            // 6. Create Content Area
             const popupContent = document.createElement('div');
             popupContent.classList.add('popup-content');
             popupContainer.appendChild(popupContent);
-            popupContainer.appendChild(buttonsDiv);
+            popupContainer.appendChild(buttonsDiv); // Buttons appended after content
 
             const popupContentVisual = document.createElement('div');
             popupContentVisual.classList.add('popup-content-visual');
@@ -66,10 +74,9 @@ export function bookPopup() {
             // popupContentVisual.innerHTML = `
             // <h2 class="popup-title">${book.querySelector('h3').textContent}</h2>
             // ${book.querySelector('img').outerHTML}`;
-            
-            const data = book.bookData; 
-            const price = book.dataset.price;
 
+            const data = book.bookData;
+            const price = book.dataset.price;
             const fullTitle = data.title;
             const imgSrc = data.formats['image/jpeg'];
             const authors = data.authors.map(a => normalizeAuthorName(a.name)).join(', ');
@@ -88,11 +95,30 @@ export function bookPopup() {
                 <p class="popup-price"> ${price} SEK </p>
             `;
 
-            // close
+            // 9. SAVE BUTTON LOGIC (New)
+            const saveBtn = buttonsDiv.querySelector(".save-btn");
+            saveBtn.addEventListener("click", () => {
+                const bookData = {
+                    title: fullTitle,
+                    img: imgSrc,
+                    author: authors,
+                    price: price
+                };
+
+                const wasAdded = addToSaved(bookData);
+                updateSavedCount();
+
+                if (wasAdded) {
+                    alert("Book saved for later!");
+                } else {
+                    alert("This book is already in your saved list.");
+                }
+            });
+
+            // 10. Close Logic
             closeButton.addEventListener('click', closePopup);
 
             function closePopup() {
-                // popupContainer.remove();
                 popupContainer.classList.add("fade-out");
                 popupContainer.addEventListener("transitionend", () => popupContainer.remove());
                 body.classList.remove('overlay-active', 'overlay-no-scroll');
@@ -104,26 +130,29 @@ export function bookPopup() {
                 if (popupContainer.contains(e.target)) return;
                 closePopup();
             }
-       
 
-       const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
-       addCartBtn.addEventListener("click", () => {
-       const bookData = {
-        title: fullTitle,
-        img: imgSrc,
-        author: authors,
-        price: price
-    };
 
-        addToCart(bookData);
-        updateCartCount();
+            const addCartBtn = buttonsDiv.querySelector(".add-cart-btn");
+            addCartBtn.addEventListener("click", () => {
+                const bookData = {
+                    title: fullTitle,
+                    img: imgSrc,
+                    author: authors,
+                    price: price
+                };
 
-         alert("Book added to cart!");
-     });
-    
-    
+                addToCart(bookData);
+                updateCartCount();
+
+                closePopup();
+
+                showAddToCartPopup(fullTitle);
+                // showFullSuccessAnimation();
+
+            });
+
+        });
     });
 
 
-});
-}
+};

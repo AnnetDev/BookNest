@@ -20,3 +20,72 @@
   box-shadow: 0 0 2px rgba(0,0,0,0.5);
   z-index: 10;
 }
+/* Full page blur + dark overlay */
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0px);
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity .3s ease, backdrop-filter .3s ease, background .3s ease;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.success-overlay.visible {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Center container */
+.success-check-container {
+    transform: scale(0.6);
+    opacity: 0;
+    transition: transform .35s cubic-bezier(.3,1.5,.5,1), opacity .35s ease;
+}
+
+.success-overlay.visible .success-check-container {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Glowing green circle */
+.success-circle {
+    width: 120px;
+    height: 120px;
+    background: #2ecc71;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(46,204,113,0.8), 0 0 50px rgba(46,204,113,0.5);
+    animation: success-bounce 0.45s ease-out;
+}
+
+/* Bounce animation */
+@keyframes success-bounce {
+    0% { transform: scale(0.7); }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* SVG */
+.success-svg {
+    width: 65px;
+    height: 65px;
+}
+
+/* Checkmark draw */
+.success-check {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: success-check-draw .55s ease forwards .25s;
+}
+
+@keyframes success-check-draw {
+    to { stroke-dashoffset: 0; }
+}
