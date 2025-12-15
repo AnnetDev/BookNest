@@ -19,3 +19,4 @@ import './scripts/offers-image-switcher.js';
    
     
 });
+
