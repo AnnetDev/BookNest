@@ -53,6 +53,7 @@
     height: 130px;
     object-fit: cover;
     box-shadow: variables.$default-shadow;
+    cursor: pointer;
     
 }
 .book h3{
@@ -66,4 +67,7 @@
     max-width: 90px;
     margin: 0.1rem 0 0.2rem 0.2rem;
     font-size: 10px;
+}
+.fa-filter {
+    font-size: 1.2rem;
 }
