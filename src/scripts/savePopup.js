@@ -1,26 +1,30 @@
-// Helper function to show a temporary popup message
-function showSaveToast(message, isSuccess = true) {
-    // 1. Create the element
-    const toast = document.createElement("div");
-    toast.className = "save-toast"; 
-    toast.textContent = message;
-    
-    // Optional: Add a modifier class for error/info styles
-    if (!isSuccess) toast.classList.add("save-toast-info");
+// savePopup.js
 
-    // 2. Append to body
-    document.body.appendChild(toast);
+export function showSavePopup(bookTitle) {
+    const overlay = document.getElementById('save-popup-overlay');
+    const titleEl = document.getElementById('save-popup-title');
+    const continueBtn = document.getElementById('save-continue-shopping');
 
-    // 3. Trigger animation (allow browser to render first)
-    requestAnimationFrame(() => {
-        toast.classList.add("show");
-    });
+    if (!overlay || !titleEl) return;
 
-    // 4. Remove after 3 seconds
-    setTimeout(() => {
-        toast.classList.remove("show");
-        toast.addEventListener("transitionend", () => {
-            toast.remove();
-        });
-    }, 3000);
-};
+    // 1. Set the Title
+    titleEl.innerHTML = `<strong>${bookTitle}</strong> has been saved to your nest!`;
+
+    // 2. Show the Overlay (using your CSS class .visible)
+    overlay.classList.add('visible');
+
+    // 3. Define Close Function
+    const closeSavePopup = () => {
+        overlay.classList.remove('visible');
+    };
+
+    // 4. Close on "Continue Shopping"
+    continueBtn.onclick = closeSavePopup;
+
+    // 5. Close on Outside Click
+    overlay.onclick = (e) => {
+        if (e.target === overlay) {
+            closeSavePopup();
+        }
+    };
+}

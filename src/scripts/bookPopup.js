@@ -97,30 +97,33 @@ export function bookPopup() {
 
         // ... inside bookPopup function ...
 
-// 9. SAVE BUTTON LOGIC
-const saveBtn = buttonsDiv.querySelector(".save-btn");
-saveBtn.addEventListener("click", () => {
-    const bookData = {
-        title: fullTitle,
-        img: imgSrc,
-        author: authors,
-        price: price
-    };
+  // 9. SAVE BUTTON LOGIC
+            const saveBtn = buttonsDiv.querySelector(".save-btn");
+            saveBtn.addEventListener("click", () => {
+                const bookData = {
+                    title: fullTitle,
+                    img: imgSrc,
+                    author: authors,
+                    price: price
+                };
 
-    const wasAdded = addToSaved(bookData);
-    updateSavedCount();
+                const wasAdded = addToSaved(bookData);
+                updateSavedCount();
 
-    if (wasAdded) {
-        // SUCCESS POPUP
-        showSaveToast("Book saved to your nest! 📖"); 
-        
-        // Optional: Change the heart icon color immediately to indicate saved
-        saveBtn.querySelector("path").setAttribute("fill", "white"); 
-    } else {
-        // ALREADY EXISTS POPUP
-        showSaveToast("This book is already saved.", false); 
-    }
-});
+                if (wasAdded) {
+                    // 2. CLOSE THE BOOK DETAILS POPUP FIRST
+                    // This prevents two popups from stacking on top of each other
+                    closePopup(); 
+
+                    // 3. SHOW THE NEW SAVE POPUP
+                    showSavePopup(fullTitle);
+                    
+                    // Optional: Fill the heart icon
+                    saveBtn.querySelector("path").setAttribute("fill", "white");
+                } else {
+                    alert("This book is already in your saved list.");
+                }
+            });
 
             // 10. Close Logic
             closeButton.addEventListener('click', closePopup);

@@ -1,29 +1,31 @@
-
 .save-toast {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px; 
     left: 50%;
-    transform: translateX(-50%) translateY(20px); /* Start slightly down */
-    background-color: #292929; /* Dark background */
+    transform: translateX(-50%) translateY(20px);
+    background-color: #292929;
     color: white;
     padding: 12px 24px;
-    border-radius: 30px;
+    border-radius: 8px; /* Slightly squarer for better look */
     font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Stronger shadow */
+    
+    /* VISIBILITY SETTINGS */
     opacity: 0;
-    transition: all 0.3s ease-out;
-    z-index: 9999;
-    pointer-events: none; /* Let clicks pass through */
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+    /* LAYERING - Must be higher than your overlay/popup */
+    z-index: 2147483647; /* Maximum possible Z-Index value */
 }
 
-/* Modifier for "Already exists" message */
-.save-toast.save-toast-info {
-    background-color: #555;
-}
-
-/* Active State */
 .save-toast.show {
     opacity: 1;
+    visibility: visible;
     transform: translateX(-50%) translateY(0);
-};
+}
+
+.save-toast.save-toast-info {
+    background-color: #d9534f; /* Red/Orange for "Already exists" */
+}

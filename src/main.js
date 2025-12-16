@@ -6,6 +6,7 @@ import './scripts/hero-slider.js';
 import './header-menu';
 import './scripts/bestsellers.js';
 import './scripts/offers-image-switcher.js';
+import './scripts/savePopup.js';
 
 
 import { updateCartCount } from "./scripts/cartService.js";
