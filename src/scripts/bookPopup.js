@@ -4,6 +4,7 @@ import { showAddToCartPopup } from "./cartPopup.js";
 import { addToSaved, updateSavedCount } from "./save.js";
 import { showFullSuccessAnimation } from "./cartService.js";
 import { showSavePopup } from "./savePopup.js";
+import { getSaved } from "./save.js";
 
 const body = document.querySelector('body');
 
@@ -100,8 +101,20 @@ export function bookPopup() {
 
             // 9. SAVE BUTTON LOGIC
             const saveBtn = buttonsDiv.querySelector(".save-btn");
+            const savedList = getSaved();
+            const isSaved = savedList.some(item => item.title === fullTitle);
+
+            if (isSaved) {
+                saveBtn.classList.add("disabled");
+                saveBtn.setAttribute("aria-disabled", "true");
+                saveBtn.querySelector("path")?.setAttribute("fill", "white");
+            }
+
             saveBtn.addEventListener("click", (e) => {
                 e.stopPropagation();
+
+                if (isSaved) return;
+
                 const bookData = {
                     title: fullTitle,
                     img: imgSrc,
@@ -109,23 +122,18 @@ export function bookPopup() {
                     price: price
                 };
 
-                const wasAdded = addToSaved(bookData);
+                addToSaved(bookData);
                 updateSavedCount();
 
-                if (wasAdded) {
-                    // 2. CLOSE THE BOOK DETAILS POPUP FIRST
-                    // This prevents two popups from stacking on top of each other
-                    closePopup();
+                saveBtn.classList.add("disabled");
+                saveBtn.setAttribute("disabled", "true");
+                saveBtn.querySelector("path")?.setAttribute("fill", "white");
 
-                    // 3. SHOW THE NEW SAVE POPUP
-                    showSavePopup(fullTitle);
-
-                    // Optional: Fill the heart icon
-                    saveBtn.querySelector("path").setAttribute("fill", "white");
-                } else {
-                    alert("This book is already in your saved list.");
-                }
+                closePopup();
+                showSavePopup(fullTitle);
             });
+
+
 
             // 10. Close Logic
             closeButton.addEventListener('click', closePopup);
