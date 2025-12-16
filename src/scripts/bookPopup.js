@@ -1,8 +1,10 @@
 import { normalizeAuthorName } from "./all-books";
 import { addToCart, updateCartCount } from "./cartService.js";
 import { showAddToCartPopup } from "./cartPopup.js";
-import { addToSaved, updateSavedCount } from "./save.js"; 
+import { addToSaved, updateSavedCount } from "./save.js";
 import { showFullSuccessAnimation } from "./cartService.js";
+import { showSavePopup } from "./savePopup.js";
+import { getSaved } from "./save.js";
 
 const body = document.querySelector('body');
 
@@ -56,7 +58,7 @@ export function bookPopup() {
                 <path d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z" fill="white"/>
                 </svg>
                 </button>`;
-            
+
             // 6. Create Content Area
             const popupContent = document.createElement('div');
             popupContent.classList.add('popup-content');
@@ -95,9 +97,24 @@ export function bookPopup() {
                 <p class="popup-price"> ${price} SEK </p>
             `;
 
-            // 9. SAVE BUTTON LOGIC (New)
+            // ... inside bookPopup function ...
+
+            // 9. SAVE BUTTON LOGIC
             const saveBtn = buttonsDiv.querySelector(".save-btn");
-            saveBtn.addEventListener("click", () => {
+            const savedList = getSaved();
+            const isSaved = savedList.some(item => item.title === fullTitle);
+
+            if (isSaved) {
+                saveBtn.classList.add("disabled");
+                saveBtn.setAttribute("aria-disabled", "true");
+                saveBtn.querySelector("path")?.setAttribute("fill", "white");
+            }
+
+            saveBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                if (isSaved) return;
+
                 const bookData = {
                     title: fullTitle,
                     img: imgSrc,
@@ -105,15 +122,18 @@ export function bookPopup() {
                     price: price
                 };
 
-                const wasAdded = addToSaved(bookData);
+                addToSaved(bookData);
                 updateSavedCount();
 
-                if (wasAdded) {
-                    alert("Book saved for later!");
-                } else {
-                    alert("This book is already in your saved list.");
-                }
+                saveBtn.classList.add("disabled");
+                saveBtn.setAttribute("disabled", "true");
+                saveBtn.querySelector("path")?.setAttribute("fill", "white");
+
+                closePopup();
+                showSavePopup(fullTitle);
             });
+
+
 
             // 10. Close Logic
             closeButton.addEventListener('click', closePopup);
