@@ -64,6 +64,7 @@ ul {
     gap: 0.5rem;
     padding: 0 10px 0 10px ;
 }
+
 svg {
     fill: variables.$main-black;
     width: 20px;
@@ -80,12 +81,13 @@ svg {
     width: 70%;
     margin: 5px auto;
     height: 38px;
-    width: 100%;
-    max-width: 390px;
+    width: 800px;
+    max-width: 100%;
 }
 
 input {
-    margin-top: 8px;
+    margin-bottom: 3px;
+    margin-left: 5px;
 }
 
 

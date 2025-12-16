@@ -13,7 +13,7 @@ export function showAddToCartPopup(bookTitle) {
 
     // Go to cart page
     document.getElementById("view-cart").onclick = () => {
-        window.location.href = "/cart.html";
+        window.location.href = "./cart.html";
     };
     setTimeout(() => {
         overlay.classList.remove("visible");

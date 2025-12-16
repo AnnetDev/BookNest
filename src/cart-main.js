@@ -2,10 +2,13 @@
 import './styles/main.scss';
 import './header-menu';
 import './scripts/scrollToTop.js';
-
-import { updateCartCount } from './scripts/cartService.js';
 import './scripts/shopping-cart.js';
+import { updateCartCount } from "./scripts/cartService.js";
+import { updateSavedCount } from './scripts/save.js';
 
-window.addEventListener('DOMContentLoaded', () => {
+import './scripts/scrollToTop.js';
+
+window.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
+    updateSavedCount();
 });
