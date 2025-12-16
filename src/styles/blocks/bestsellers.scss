@@ -1,75 +1,114 @@
 @use '../common/variables';
 
 
-.best-and-top-wrapper { /* section background color */
-    background: variables.$beige;
+.best-and-top-wrapper {
+  /* section background color */
+  background: variables.$beige;
 }
 
 .bestsellers,
 .topgenres-section {
   max-width: 1440px;
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+
+  h2 {
+    text-shadow: 0.5px 0.5px 1px variables.$dark-brown;
+  }
+
+}
+
+.bestsellers:after {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.5px;
+  width: 100%;
+  background-color: variables.$dark-brown;
+  opacity: 0.2;
+  box-shadow: 0 0 5px variables.$dark-brown;
+}
+
+.bestsellers-title {
+  /* bestsellers title */
+  text-align: start;
+  padding: 0.5rem;
+  max-inline-size: fit-content;
 }
 
 
-.bestsellers-title { /* bestsellers title */
-    text-align: start;
-    padding: 0.5rem;
-    max-inline-size: fit-content;
-}
-
-
-.books-row { /* the book it returns and its styles */
+.books-row {
+  /* the book it returns and its styles */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-content: center;
   white-space: nowrap;
-  overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 20px;
+  overflow-x: scroll;
+  scrollbar-color: variables.$dark-brown rgba(255, 255, 255, 0.3);
+  /* thumb and track color */
 
-  > div { /* position of author & title */
+
+  >div {
+    /* position of author & title */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+   min-width: 150px;
     text-align: center;
     word-wrap: break-word;
-    flex: 0 0 auto;  // keeps each card a fixed width for scrolling
+    flex: 0 0 auto; // keeps each card a fixed width for scrolling
 
-
+@media (min-width: variables.$tablet-breakpoint) {
+  width: 30%;
+  
+}
     img {
       width: 100%;
       max-width: 90px;
       height: 130px;
       object-fit: cover;
       box-shadow: variables.$default-shadow;
+      margin-bottom: 10px;
     }
   }
 }
 
 #bestsellers-container div {
-margin-right: 10px;
+  margin-right: 10px;
 }
 
-.books-row p { /* the author & title text */ 
-    width: 90%;
-    max-width: 90px;
-    margin: 0.1rem 0 0.2rem 0.2rem;
-    font-size: 10px;
+.books-row p {
+  /* the author & title text */
+  width: 90%;
+  max-width: 90px;
+  margin: 0.1rem 0 0.2rem 0.2rem;
+  font-size: 10px;
 }
 
 
 .book-title {
-    font-weight: bold;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.book-author {
+  text-align: left;
 }
 
 // top genres section //
-.topgenres-title { /* top genres title */
-    text-align: start;
-    padding: 0.5rem;
-    max-inline-size: fit-content;   
+.topgenres-title {
+  /* top genres title */
+  text-align: start;
+  padding: 0.5rem;
+  max-inline-size: fit-content;
 }
 
 
@@ -82,6 +121,7 @@ margin-right: 10px;
   white-space: nowrap;
   gap: 1rem; // optional but nice
 }
+
 /*
 
 #topgenres-container {
@@ -95,6 +135,22 @@ margin-right: 10px;
   white-space: nowrap; // keeps cards in a row, horizontally scrollable
 }
 
-.books-row > div {
+.books-row>div {
   white-space: normal; // allows title & author text to wrap inside each card
+}
+
+.clickable-book-topgenres,
+.clickable-book-bestsellers {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  // border: 1px solid rgba(146, 115, 93, 0.3);
+  padding: 20px 10px 10px 10px;
+  border-radius: 10px;
+background-color: rgba(255, 255, 255, 0.5);
+box-shadow: variables.$default-shadow;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
