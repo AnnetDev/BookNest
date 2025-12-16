@@ -95,25 +95,32 @@ export function bookPopup() {
                 <p class="popup-price"> ${price} SEK </p>
             `;
 
-            // 9. SAVE BUTTON LOGIC (New)
-            const saveBtn = buttonsDiv.querySelector(".save-btn");
-            saveBtn.addEventListener("click", () => {
-                const bookData = {
-                    title: fullTitle,
-                    img: imgSrc,
-                    author: authors,
-                    price: price
-                };
+        // ... inside bookPopup function ...
 
-                const wasAdded = addToSaved(bookData);
-                updateSavedCount();
+// 9. SAVE BUTTON LOGIC
+const saveBtn = buttonsDiv.querySelector(".save-btn");
+saveBtn.addEventListener("click", () => {
+    const bookData = {
+        title: fullTitle,
+        img: imgSrc,
+        author: authors,
+        price: price
+    };
 
-                if (wasAdded) {
-                    alert("Book saved for later!");
-                } else {
-                    alert("This book is already in your saved list.");
-                }
-            });
+    const wasAdded = addToSaved(bookData);
+    updateSavedCount();
+
+    if (wasAdded) {
+        // SUCCESS POPUP
+        showSaveToast("Book saved to your nest! 📖"); 
+        
+        // Optional: Change the heart icon color immediately to indicate saved
+        saveBtn.querySelector("path").setAttribute("fill", "white"); 
+    } else {
+        // ALREADY EXISTS POPUP
+        showSaveToast("This book is already saved.", false); 
+    }
+});
 
             // 10. Close Logic
             closeButton.addEventListener('click', closePopup);
