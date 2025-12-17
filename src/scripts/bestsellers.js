@@ -33,6 +33,7 @@ function render(data) {
     data.results.slice(5, 15).forEach(book => {
       const card = document.createElement("div");
       card.classList.add("clickable-book");
+      card.classList.add("clickable-book-bestsellers");
       card.bookData = book;
       card.dataset.price = getRandomPrice();
 
@@ -64,6 +65,7 @@ function render(data) {
     data.results.slice(16, 24).forEach(book => { //take books from array
       const card = document.createElement("div"); //creates a div element for each book
       card.classList.add("clickable-book"); //css class for styling
+      card.classList.add("clickable-book-topgenres"); 
       card.bookData = book; //attaches book data directly to element for later use
       card.dataset.price = getRandomPrice(); //adds random price
 

@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     width: 100%;
     min-width: 320px;
+    display: flex;
     flex-direction: column; // for sticky footer 
     justify-content: space-between; // for sticky footer 
     overflow-x: hidden;
@@ -32,6 +33,9 @@ body {
 
 main {
     flex-grow: 1; // for sticky footer 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 img {
@@ -61,4 +65,17 @@ img {
 
 .button {
     cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }

@@ -1,4 +1,3 @@
-// src/cart-main.js
 import './styles/main.scss';
 import './header-menu';
 import './scripts/scrollToTop.js';

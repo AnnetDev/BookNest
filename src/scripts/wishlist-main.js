@@ -4,6 +4,13 @@ import '/src/header-menu.js';
 import { getSaved, updateSavedCount, removeFromSaved } from './save.js';
 import { addToCart, updateCartCount } from './cartService.js';
 
+import './scrollToTop.js';
+
+window.addEventListener("DOMContentLoaded", () => {
+    updateCartCount();
+    updateSavedCount();
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

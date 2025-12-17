@@ -1,87 +1,107 @@
-.footer { 
+@use '../common/variables';
 
-    background-color: #91735D; 
+.footer {
+  background-color: #91735D;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-    padding: 40px 80px; 
+  h2 {
+    color: variables.$beige;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0;
 
-    display: flex; 
+    @media (min-width: variables.$tablet-breakpoint) {
+      text-align: left;
+    }
+  }
 
-    justify-content: center; 
 
-} 
+  @media (min-width: variables.$tablet-breakpoint) {
+    justify-content: space-between;
+  }
+}
 
- 
+.footer-content-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
-.footer content { 
+  @media (min-width: variables.$tablet-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+      flex-wrap: wrap;
 
-  max-width: 1200px; 
+  }
+}
 
-  width: 100%; 
+.footer-content {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
-  display: flex; 
+  @media (min-width: variables.$tablet-breakpoint) {
+    width: fit-content;
+    
 
-justify-content: space-between; 
+  }
+}
 
-    align-items: center; 
 
-    flex-wrap: wrap; 
+.Newsletter-form {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  max-width: 90%;
+}
 
-} 
 
- 
 
-.newsletter-form { 
+.Newsletter-form input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  margin: 0;
+  width: 220px;
+  max-width: 100%;
+}
 
-  display: flex; 
 
-  align-items: center; 
 
-} 
+.Newsletter-form button {
+  margin: auto;
+  padding: 15px 25px;
+  border: none;
+  background-color: #47362a;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  margin: 0;
+  height: 100%;
+}
 
- 
 
-.newsletter-form input{ 
 
-  padding: 10px; 
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
 
-  border: none; 
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
 
-  border-radius: 20psx 0 0 20px; 
-
-outline: none; 
-
-width: 220px 
-
-} 
-
- 
-
-.newsletter-form buttom { 
-
-  padding: 10px 20px; 
-
-  border: none; 
-
-  background-color: #91735D; 
-
-  color: #fff; 
-
-  border-radius: 0 20px 20px 0; 
-
-  cursor: pointer; 
-
-} 
-
- 
-
-.sociual-icons a { 
-
-  color: #fff; 
-
-  margin-left:20x; 
-
-  font-size: 20px; 
-
-  text-decoration: none; 
-
-} 
+.social-icons img:hover {
+  opacity: 0.7;
+}
