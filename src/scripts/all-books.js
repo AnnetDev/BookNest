@@ -1,6 +1,7 @@
 import { bookPopup } from "./bookPopup";
 
 const allBooksContainer = document.querySelector('.books-grid');
+const loader = document.querySelector('.all-book-loader');
 
 const TOTAL_PAGES = 2400; // Gutendex total pages
 
@@ -59,7 +60,10 @@ function loadRandomBooks() {
 
         allBooksContainer.appendChild(bookEl);
       });
+
+      loader.remove();
       bookPopup();
+
     })
     .catch(err => console.error(err));
 }

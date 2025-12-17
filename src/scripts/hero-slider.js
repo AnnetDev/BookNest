@@ -74,7 +74,7 @@ function initHeroSlider() {
         slidesPerView: 1.3,
         loop: false,              
         spaceBetween: 30,
-        speed: 800,
+        speed: 3500,
 
         pagination: {
             el: '.swiper-pagination',
@@ -98,7 +98,7 @@ function initHeroSlider() {
         }
 
         heroSwiper.slideTo(heroSwiper.activeIndex + direction);
-    }, 3000); // interval time
+    }, 7000); // interval time
 }
 
 

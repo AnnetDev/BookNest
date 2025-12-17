@@ -108,6 +108,7 @@
 
 
     <main>
+        <h1 class="visually-hidden">homepage</h1>
         <section class="hero common-padding" id="hero">
             <div class='lds-roller' role="status" aria-label="Loading">
                 <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -146,9 +147,11 @@
 
         <!--All books section-->
         <section class="all-books" id="all-books">
+            
             <div class="books-header">
                 <div class="books-header-content">
                     <div class="books-title">all books</div>
+                    
                     <div class="books-filter" role="button" tabindex="0" aria-label="Filter A-Z">
                         Filter A-Z <img src="src/images/icons/Funnel.svg" alt="Filter icon">
                     </div>
@@ -157,7 +160,9 @@
             </div>
             <div class="books-grid common-padding" aria-live="polite">
                 <!-- Books will be dynamically inserted here -->
-
+                <div class='lds-roller all-book-loader' role="status" aria-label="Loading">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
             </div>
             <button class="load-more" aria-label="Load more books">Show More</button>
         </section>

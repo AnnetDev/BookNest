@@ -49,6 +49,7 @@
     padding: 0.5rem 1.5rem;
     max-width: 1440px;
     margin: 0 auto;
+    min-height: 100px;
 }
 
 .book {
@@ -81,4 +82,12 @@
 }
 .fa-filter {
     font-size: 1.2rem;
+}
+
+.all-books {
+position: relative;
+    .all-book-loader {
+position: absolute  ;
+left: 50%;  
+transform: translateX(-50%);  }
 }
