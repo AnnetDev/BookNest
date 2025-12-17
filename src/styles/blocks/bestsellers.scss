@@ -10,8 +10,8 @@
 .topgenres-section {
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 4px;
+  padding-bottom: 10px;
   position: relative;
 
   h2 {
@@ -60,7 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   min-width: 150px;
+    min-width: 150px;
     text-align: center;
     word-wrap: break-word;
     flex: 0 0 auto; // keeps each card a fixed width for scrolling
@@ -78,10 +78,6 @@
       margin-bottom: 10px;
     }
   }
-}
-
-#bestsellers-container div {
-  margin-right: 10px;
 }
 
 .books-row p {
@@ -144,7 +140,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   // border: 1px solid rgba(146, 115, 93, 0.3);
-  padding: 20px 10px 10px 10px;
+  padding: 14px 0 4px 0;
   border-radius: 10px;
 background-color: rgba(255, 255, 255, 0.5);
 box-shadow: variables.$default-shadow;

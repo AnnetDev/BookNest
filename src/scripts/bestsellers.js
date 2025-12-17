@@ -38,8 +38,11 @@ function render(data) {
       card.dataset.price = getRandomPrice();
 
       const img = document.createElement("img");
-      img.src = book.formats["image/jpeg"];
+      img.src = book.formats['image/webp'] ||
+          book.formats['image/jpeg'] ||
+          book.formats['image/png'] ||'';
       img.alt = book.title;
+      img.loading = "lazy";
 
       const title = document.createElement("p");
       title.classList.add("book-title");
@@ -71,8 +74,11 @@ function render(data) {
 
       //creates <img> element, uses the API books jpeg image
       const img = document.createElement("img");
-      img.src = book.formats["image/jpeg"];
+      img.src = book.formats['image/webp'] ||
+          book.formats['image/jpeg'] ||
+          book.formats['image/png'] ||'';
       img.alt = book.title;
+      img.loading = "lazy";
 
       //creates <p> element for title and css for styling (class)
       const title = document.createElement("p");
