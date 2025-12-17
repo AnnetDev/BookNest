@@ -3,7 +3,8 @@ import { bookPopup } from "./bookPopup";
 const allBooksContainer = document.querySelector('.books-grid');
 const loader = document.querySelector('.all-books-loader');
 
-const TOTAL_PAGES = 2400; // Gutendex total pages
+//const TOTAL_PAGES = 2400; // Gutendex total pages
+const MAX_FAST_PAGES = 300;
 
 export function getRandomPrice() {
     const min = 120;
@@ -29,7 +30,8 @@ export function normalizeAuthorName(name) {
 // Function to load 6 random books
 function loadRandomBooks() {
   // Pick a random page
-  const randomPage = Math.floor(Math.random() * TOTAL_PAGES) + 1;
+  //const randomPage = Math.floor(Math.random() * TOTAL_PAGES) + 1;
+  const randomPage = Math.floor(Math.random() * MAX_FAST_PAGES) + 1;
 
   fetch(`https://gutendex.com/books?page=${randomPage}`)
     .then(res => res.json())
@@ -60,10 +62,10 @@ function loadRandomBooks() {
 
         allBooksContainer.appendChild(bookEl);
       });
-      loader.style.display = 'none'; // hide loader after books are loaded
       bookPopup();
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(err)).finally(() => {
+      if (loader) loader.style.display = "none";});
 }
 
 // Call function to load books

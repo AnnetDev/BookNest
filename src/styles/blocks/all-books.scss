@@ -5,7 +5,7 @@
     background: variables.$light-brown;
     color: variables.$main-white;
     padding: 1rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     box-shadow: variables.$default-shadow;
 }
 
@@ -33,7 +33,8 @@
     display: block;
     margin: 2rem auto;
     padding: 0.8rem 2.5rem;
-    background-color: variables.$light-brown;
+    background-color: variables.$dark-brown;
+    opacity: 0.8;
     color: variables.$main-white;
     border: none;
     border-radius: 22px;
@@ -44,6 +45,10 @@
     text-shadow: 0.5px 0.5px 1px #664934;
 }
 
+.load-more:hover {
+    opacity: 1;
+    scale: 1.05;
+}
 .books-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -74,13 +79,13 @@
     width: 90%;
     max-width: 90px;
     margin: 0.4rem 0 0.1rem 0.2rem;
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 .book p {
     width: 90%;
     max-width: 90px;
     margin: 0.1rem 0 0.2rem 0.2rem;
-    font-size: 10px;
+    font-size: 0.7rem;
 }
 .fa-filter {
     font-size: 1.2rem;
