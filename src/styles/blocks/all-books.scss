@@ -5,7 +5,7 @@
     background: variables.$light-brown;
     color: variables.$main-white;
     padding: 1rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     box-shadow: variables.$default-shadow;
 }
 
@@ -16,7 +16,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px 1px #664934;
 }
 
 .books-title {
@@ -32,15 +33,22 @@
     display: block;
     margin: 2rem auto;
     padding: 0.8rem 2.5rem;
-    background-color: variables.$light-brown;
+    background-color: variables.$dark-brown;
+    opacity: 0.8;
     color: variables.$main-white;
     border: none;
     border-radius: 22px;
     box-shadow: variables.$default-shadow;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px 1px #664934;
 }
 
+.load-more:hover {
+    opacity: 1;
+    scale: 1.05;
+}
 .books-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,7 +65,7 @@
     flex-direction: column; 
     align-items: center; 
     text-align: start; 
-    //text-align: center;
+    padding: 14px 0 4px 0;
 }
 .book img {
     width: 100%;
@@ -66,28 +74,31 @@
     object-fit: cover;
     box-shadow: variables.$default-shadow;
     cursor: pointer;
-    
+    margin-bottom: 4px;
 }
 .book h3{
     width: 90%;
     max-width: 90px;
     margin: 0.4rem 0 0.1rem 0.2rem;
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 .book p {
     width: 90%;
     max-width: 90px;
     margin: 0.1rem 0 0.2rem 0.2rem;
-    font-size: 10px;
+    font-size: 0.7rem;
 }
 .fa-filter {
     font-size: 1.2rem;
 }
-
-.all-books {
-position: relative;
-    .all-book-loader {
-position: absolute  ;
-left: 50%;  
-transform: translateX(-50%);  }
+.books-grid {
+    position: relative;
+    min-height: 100px;
+}
+.all-books-loader {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

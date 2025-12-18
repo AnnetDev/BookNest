@@ -59,3 +59,14 @@ export function updateSavedCount() {
     countEl.style.display = "none";
   }
 }
+
+//Removes book from saved books on wishlist page and updates counter 
+export function removeFromSaved(title) {
+  const savedList = JSON.parse(localStorage.getItem("booknest-saved"));
+  function keepOtherBooks(book) { //filter the saved list and keep the books that don't match the title to remove
+    return book.title !== title;
+  }
+
+  const updatedList = savedList.filter(keepOtherBooks);
+  localStorage.setItem("booknest-saved", JSON.stringify(updatedList));
+}

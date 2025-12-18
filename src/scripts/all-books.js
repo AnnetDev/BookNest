@@ -1,7 +1,7 @@
 import { bookPopup } from "./bookPopup";
 
 const allBooksContainer = document.querySelector('.books-grid');
-const loader = document.querySelector('.all-book-loader');
+const loader = document.querySelector('.all-books-loader');
 
 const TOTAL_PAGES = 2400; // Gutendex total pages
 
@@ -31,13 +31,14 @@ function loadRandomBooks() {
   // Pick a random page
   const randomPage = Math.floor(Math.random() * TOTAL_PAGES) + 1;
 
+
   fetch(`https://gutendex.com/books?page=${randomPage}`)
     .then(res => res.json())
     .then(data => {
       const books = data.results;
 
-      // Select 6 random books from this page
-      const randomBooks = books.sort(() => 0.5 - Math.random()).slice(0, 6);
+      // Select 9 random books from this page
+      const randomBooks = books.sort(() => 0.5 - Math.random()).slice(0, 9);
 
       randomBooks.forEach(book => {
         const bookEl = document.createElement('div');
@@ -65,7 +66,8 @@ function loadRandomBooks() {
       bookPopup();
 
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(err)).finally(() => {
+      if (loader) loader.style.display = "none";});
 }
 
 // Call function to load books
@@ -84,7 +86,7 @@ let isAZ = true;
 
 if (filterBtn) {
   filterBtn.addEventListener('click', () => {
-  const booksArray = Array.from(allBooksContainer.children);
+  const booksArray = Array.from(allBooksContainer.querySelectorAll('.book'));
   booksArray.sort((a, b) => {
     const titleA = a.querySelector('p').textContent.toLowerCase();
     const titleB = b.querySelector('p').textContent.toLowerCase();
