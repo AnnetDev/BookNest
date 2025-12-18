@@ -13,10 +13,10 @@
     <link rel="manifest" href="/BookNest/assets/site-DI0yMH26.webmanifest" />
     <link rel="stylesheet" href="/src/styles/main.css">
     <title>BookNest</title>
-  <script type="module" crossorigin src="/BookNest/assets/main-aQBIrCHa.js"></script>
-  <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-DFeQt5hq.js">
+  <script type="module" crossorigin src="/BookNest/assets/main-C371nm9s.js"></script>
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-CHU0oLrA.js">
   <link rel="modulepreload" crossorigin href="/BookNest/assets/offers-image-switcher-DJa-Dkkl.js">
-  <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-DGOHn6Rx.css">
+  <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-C-xqy2nS.css">
   <link rel="stylesheet" crossorigin href="/BookNest/assets/main-uGqyt-El.css">
 </head>
 
@@ -150,7 +150,7 @@
 
 
         <!--All books section-->
-        <section class="all-books" id="all-books">
+        <section class="all-books" id="all-books" role="region" aria-label="All books">
             <div class="books-header">
                 <div class="books-header-content">
                     <div class="books-title">all books</div>
@@ -161,6 +161,9 @@
                 </div>
             </div>
             <div class="books-grid common-padding" aria-live="polite">
+            <div class='lds-roller all-books-loader' role="status" aria-label="Loading">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
                 <!-- Books will be dynamically inserted here -->
 
             </div>

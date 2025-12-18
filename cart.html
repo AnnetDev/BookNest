@@ -13,28 +13,28 @@
     <link rel="manifest" href="/BookNest/assets/site-DI0yMH26.webmanifest" />
     <link rel="stylesheet" href="/src/styles/main.css">
     <title>BookNest</title>
-  <script type="module" crossorigin src="/BookNest/assets/cart-Bi-hSWpq.js"></script>
-  <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-DFeQt5hq.js">
-  <link rel="modulepreload" crossorigin href="/BookNest/assets/shopping-cart-BITrIVNf.js">
-  <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-DGOHn6Rx.css">
+  <script type="module" crossorigin src="/BookNest/assets/cart-Cv7eYKQu.js"></script>
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/scrollToTop-CHU0oLrA.js">
+  <link rel="modulepreload" crossorigin href="/BookNest/assets/shopping-cart-B85ekp3e.js">
+  <link rel="stylesheet" crossorigin href="/BookNest/assets/scrollToTop-C-xqy2nS.css">
 </head>
 
 <body>
     <header class="header common-padding">
-        <nav>
-            <button class="menu-icon" type="button">
-                <img src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%201.25C0%200.558594%200.558594%200%201.25%200H16.25C16.9414%200%2017.5%200.558594%2017.5%201.25C17.5%201.94141%2016.9414%202.5%2016.25%202.5H1.25C0.558594%202.5%200%201.94141%200%201.25ZM0%207.5C0%206.80859%200.558594%206.25%201.25%206.25H16.25C16.9414%206.25%2017.5%206.80859%2017.5%207.5C17.5%208.19141%2016.9414%208.75%2016.25%208.75H1.25C0.558594%208.75%200%208.19141%200%207.5ZM17.5%2013.75C17.5%2014.4414%2016.9414%2015%2016.25%2015H1.25C0.558594%2015%200%2014.4414%200%2013.75C0%2013.0586%200.558594%2012.5%201.25%2012.5H16.25C16.9414%2012.5%2017.5%2013.0586%2017.5%2013.75Z'%20fill='black'/%3e%3c/svg%3e" class="icon-menu">
+        <nav aria-label="Main navigation">
+            <button class="menu-icon" type="button" aria-label="Open menu">
+                <img src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%201.25C0%200.558594%200.558594%200%201.25%200H16.25C16.9414%200%2017.5%200.558594%2017.5%201.25C17.5%201.94141%2016.9414%202.5%2016.25%202.5H1.25C0.558594%202.5%200%201.94141%200%201.25ZM0%207.5C0%206.80859%200.558594%206.25%201.25%206.25H16.25C16.9414%206.25%2017.5%206.80859%2017.5%207.5C17.5%208.19141%2016.9414%208.75%2016.25%208.75H1.25C0.558594%208.75%200%208.19141%200%207.5ZM17.5%2013.75C17.5%2014.4414%2016.9414%2015%2016.25%2015H1.25C0.558594%2015%200%2014.4414%200%2013.75C0%2013.0586%200.558594%2012.5%201.25%2012.5H16.25C16.9414%2012.5%2017.5%2013.0586%2017.5%2013.75Z'%20fill='black'/%3e%3c/svg%3e" class="icon-menu" alt="Menu icon">
             </button>
 
             <div class="logo-icon">
-                <a class="header-logo-link" href="./index.html">
-                    <img src="/BookNest/assets/logo-icon-CGIuLPiU.svg">
+                <a class="header-logo-link" href="./index.html" aria-label="Go to homepage">
+                    <img src="/BookNest/assets/logo-icon-CGIuLPiU.svg" alt="BookNest logo">
                 </a>
             </div>
 
             <ul>
                 <li>
-                    <a href="./404.html">
+                    <a href="./404.html" role="menuitem" aria-label="User profile">
                         <svg width="13" height="17" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.75 11.25C12.8578 11.25 15.375 8.73281 15.375 5.625C15.375 2.51719 12.8578 0 9.75 0C6.64219 0 4.125 2.51719 4.125 5.625C4.125 8.73281 6.64219 11.25 9.75 11.25ZM8.35781 13.875C3.74062 13.875 0 17.6156 0 22.2328C0 23.0016 0.623437 23.625 1.39219 23.625H18.1078C18.8766 23.625 19.5 23.0016 19.5 22.2328C19.5 17.6156 15.7594 13.875 11.1422 13.875H8.35781Z"
@@ -44,8 +44,8 @@
                 </li>
 
                 <!-- Save Icon -->
-                <li class="save-icon">
-                    <a href="./wishlist.html">
+                <li class="save-icon" role="none">
+                    <a href="./wishlist.html" role="menuitem" aria-label="Wishlist">
 
                         <svg width="23" height="20" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -56,8 +56,8 @@
                     <span id="save-count">0</span>
                 </li>
                 <!-- Cart Icon -->
-                <li class="cart-icon">
-                    <a href="./cart.html">
+                <li class="cart-icon" role="none">
+                    <a href="./cart.html" role="menuitem" aria-label="Shopping cart">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M5 16.6667C4.54167 16.6667 4.14931 16.5035 3.82292 16.1771C3.49653 15.8507 3.33333 15.4583 3.33333 15C3.33333 14.5417 3.49653 14.1493 3.82292 13.8229C4.14931 13.4965 4.54167 13.3333 5 13.3333C5.45833 13.3333 5.85069 13.4965 6.17708 13.8229C6.50347 14.1493 6.66667 14.5417 6.66667 15C6.66667 15.4583 6.50347 15.8507 6.17708 16.1771C5.85069 16.5035 5.45833 16.6667 5 16.6667ZM13.3333 16.6667C12.875 16.6667 12.4826 16.5035 12.1562 16.1771C11.8299 15.8507 11.6667 15.4583 11.6667 15C11.6667 14.5417 11.8299 14.1493 12.1562 13.8229C12.4826 13.4965 12.875 13.3333 13.3333 13.3333C13.7917 13.3333 14.184 13.4965 14.5104 13.8229C14.8368 14.1493 15 14.5417 15 15C15 15.4583 14.8368 15.8507 14.5104 16.1771C14.184 16.5035 13.7917 16.6667 13.3333 16.6667ZM4.29167 3.33333L6.29167 7.5H12.125L14.4167 3.33333H4.29167ZM3.5 1.66667H15.7917C16.1111 1.66667 16.3542 1.80903 16.5208 2.09375C16.6875 2.37847 16.6944 2.66667 16.5417 2.95833L13.5833 8.29167C13.4306 8.56944 13.2257 8.78472 12.9688 8.9375C12.7118 9.09028 12.4306 9.16667 12.125 9.16667H5.91667L5 10.8333H15V12.5H5C4.375 12.5 3.90278 12.2257 3.58333 11.6771C3.26389 11.1285 3.25 10.5833 3.54167 10.0417L4.66667 8L1.66667 1.66667H0V0H2.70833L3.5 1.66667Z"
@@ -70,25 +70,26 @@
         </nav>
 
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <label for="search-input" class="visually-hidden">Search books</label>
+            <input id="search-input" type="text" placeholder="Search..." aria-label="Search books">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </div>
 
 
-        <div class="menu-wrapper" id="subMenu">
-            <a href="./index.html" class="sub-menu-link">
+        <div class="menu-wrapper" id="subMenu" role="navigation" aria-label="Submenu">
+            <a href="./index.html" class="sub-menu-link" aria-label="Go to offers">
                 <p class="paragraph">Home</p>
                 <span></span>
             </a>
             <hr>
 
-            <a href="./404.html" class="sub-menu-link">
+            <a href="./404.html" class="sub-menu-link" aria-label="Profile">
                 <p class="paragraph">Profile</p>
                 <span></span>
             </a>
             <hr>
 
-            <a href="#contacts" class="sub-menu-link">
+            <a href="#contacts" class="sub-menu-link" aria-label="Contacts section">
                 <p class="paragraph">Contacts</p>
                 <span></span>
             </a>
@@ -98,17 +99,17 @@
 
     <main>
         <section class="cart common-padding">
-            <div class='cart-title'>
+            <div class='cart-title' role="heading" aria-level="2">
                 <h2>Shopping Cart</h2>
             </div>
-            <div id="cart-items-container">
+            <div id="cart-items-container" aria-live="polite" aria-relevant="additions removals">
                 <!-- Cart items will be dynamically added here -->
             </div>
-            <div class="cart-total">
+            <div class="cart-total" role="contentinfo">
                 <h3>Total: </h3>
                 <h3><span id="cart-total-amount">0</span> SEK</h3>
             </div>
-            <div class="cart-buttons">
+            <div class="cart-buttons" role="region" aria-label="Cart actions">
                 <button id="order-button">order</button>
                 <button id="continue-shopping-button">continue shopping</button>
             </div>
@@ -166,7 +167,7 @@
             <div class="newsletter">
                 <h2>Newsletter</h2>
                 <form class="Newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
+                    <input type="email" placeholder="Enter your email" required aria-label="Enter your email for newsletter">
                     <button type="submit">Submit</button>
                 </form>
             </div>
