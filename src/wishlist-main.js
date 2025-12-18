@@ -1,11 +1,8 @@
-
-import '../styles/main.scss';
-import '/src/header-menu.js';
-import { getSaved, updateSavedCount, removeFromSaved } from './save.js';
-import { addToCart, updateCartCount } from './cartService.js';
-
-import './scrollToTop.js';
-
+import './styles/main.scss';
+import './scripts/header-menu.js';
+import { getSaved, updateSavedCount, removeFromSaved } from './scripts/save.js';
+import { addToCart, updateCartCount } from './scripts/cartService.js';
+import './scripts/scrollToTop.js';
 window.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
     updateSavedCount();

@@ -61,7 +61,10 @@ function loadRandomBooks() {
 
         allBooksContainer.appendChild(bookEl);
       });
+
+      loader.remove();
       bookPopup();
+
     })
     .catch(err => console.error(err)).finally(() => {
       if (loader) loader.style.display = "none";});

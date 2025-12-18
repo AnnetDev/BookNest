@@ -1,10 +1,9 @@
 import './styles/main.scss';
-import './header-menu';
+import './scripts/header-menu.js';
 import './scripts/scrollToTop.js';
 import './scripts/shopping-cart.js';
 import { updateCartCount } from "./scripts/cartService.js";
 import { updateSavedCount } from './scripts/save.js';
-
 import './scripts/scrollToTop.js';
 
 window.addEventListener("DOMContentLoaded", () => {
